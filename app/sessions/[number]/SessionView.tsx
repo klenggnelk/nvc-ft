@@ -16,6 +16,7 @@ const copyByLanguage: Record<
     recordingLink: string;
     recordingSoon: string;
     read: string;
+    podcast: string;
     practise: string;
     practiseIntro: string;
     flow: string;
@@ -31,7 +32,8 @@ const copyByLanguage: Record<
     recording: "Missed the session?",
     recordingLink: "Watch the recording of the topics and exercise instructions",
     recordingSoon: "The recording of the topics and exercise instructions will appear here after the session.",
-    read: "Suggested reading",
+    read: "Read and listen",
+    podcast: "Podcast",
     practise: "Practise this week",
     practiseIntro: "Small practices for the days between sessions. There are no wrong answers — only practice.",
     flow: "How each session runs",
@@ -46,7 +48,8 @@ const copyByLanguage: Record<
     recording: "Gikk du glipp av samlingen?",
     recordingLink: "Se opptaket av temaene og øvelsesinstruksjonene",
     recordingSoon: "Opptaket av temaene og øvelsesinstruksjonene kommer her etter samlingen.",
-    read: "Forslag til lesing",
+    read: "Les og lytt",
+    podcast: "Podkast",
     practise: "Øv denne uken",
     practiseIntro: "Små øvelser for dagene mellom samlingene. Her finnes ingen feil svar — bare øving.",
     flow: "Slik foregår hver samling",
@@ -110,8 +113,13 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
           <ul className="space-y-1">
             {session.resources.map((resource) => (
               <li key={resource.id}>
+                {resource.kind === "podcast" && <span className="mr-2 rounded-full bg-accent-soft px-2 py-0.5 text-xs text-accent">{copy.podcast}</span>}
                 {resource.url ? (
-                  <a href={resource.url} className="text-accent underline-offset-2 hover:underline">
+                  <a
+                    href={resource.url}
+                    {...(resource.url.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="text-accent underline-offset-2 hover:underline"
+                  >
                     {localize(resource.title, language)}
                   </a>
                 ) : (

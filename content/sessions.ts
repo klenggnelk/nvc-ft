@@ -50,7 +50,7 @@ export const sessionFlow: { minutes: number; label: Localized }[] = [
 // Types
 // ---------------------------------------------------------------------------
 
-export type ResourceKind = "reading" | "video" | "handout" | "link";
+export type ResourceKind = "reading" | "video" | "podcast" | "handout" | "link";
 
 export type Resource = {
   id: string;
@@ -87,6 +87,29 @@ const book = (id: string, chapter: number, title: string): Resource => ({
   title: en(`Rosenberg, Nonviolent Communication — Chapter ${chapter}: ${title}`),
 });
 
+// Podcast: recordings of Marshall Rosenberg's own NVC training sessions (Spotify, English audio).
+const rosenbergEpisode = (id: string, episodeTitle: string, spotifyEpisodeId: string): Resource => ({
+  id,
+  kind: "podcast",
+  title: { en: `Rosenberg: ${episodeTitle}`, no: `Rosenberg: ${episodeTitle} (engelsk)` },
+  url: `https://open.spotify.com/episode/${spotifyEpisodeId}`,
+});
+
+/** Resources for the whole training, shown above the sessions on the Resources page. */
+export const generalResources: Resource[] = [
+  {
+    id: "podcast-rosenberg-nvc-training",
+    kind: "podcast",
+    title: en("Nonviolent Communication – Marshall Rosenberg's NVC Training"),
+    url: "https://open.spotify.com/show/3jPpnalv97b9ky9BB5DCAA",
+    note: {
+      en: "Recordings of Marshall Rosenberg's own training sessions (Spotify, in English).",
+      no: "Opptak fra Marshall Rosenbergs egne treningssamlinger (Spotify, på engelsk).",
+    },
+  },
+  rosenbergEpisode("podcast-sincere-gratitude", "Role of Sincere Gratitude", "4I8n4y843eZrjaVVUnDlxa"),
+];
+
 // ---------------------------------------------------------------------------
 // The ten sessions
 // ---------------------------------------------------------------------------
@@ -108,6 +131,7 @@ export const sessions: Session[] = [
       book("s1-ch1", 1, "Giving from the heart"),
       book("s1-ch2", 2, "Communication that blocks compassion"),
       book("s1-ch3", 3, "Observing without evaluating"),
+      rosenbergEpisode("s1-podcast-intro", "Introduction to Nonviolent Communication", "0Dfd1vDw9eYPOFPcB4tAfY"),
     ],
     exercises: [
       {
@@ -167,7 +191,10 @@ export const sessions: Session[] = [
       "What happens when someone feels truly heard? In this session we practise listening for the feelings and needs behind complaints, stories and experiences, including the needs that are met and the needs that aren't. You'll discover how much can shift when people feel understood rather than judged or fixed.",
     ),
     topics: [en("Building your empathy muscle"), en("Staying curious")],
-    resources: [book("s3-ch7", 7, "Receiving empathically")],
+    resources: [
+      book("s3-ch7", 7, "Receiving empathically"),
+      rosenbergEpisode("s3-podcast-dynamics-of-empathy", "Dynamics of Empathy", "5v9tSglQutTmSDv0vwk2d2"),
+    ],
     exercises: [
       {
         id: "s3-silent-empathy",
@@ -226,7 +253,7 @@ export const sessions: Session[] = [
       en("Using OFNR for honest expression and empathic listening"),
       en("Practising with real-life situations"),
     ],
-    resources: [],
+    resources: [rosenbergEpisode("s5-podcast-4-part-model", "The 4 Part NVC Model", "2PXhRKCE0ls0c4zZS0FlKp")],
     exercises: [
       {
         id: "s5-prepare-situation",
@@ -256,7 +283,10 @@ export const sessions: Session[] = [
       en("Mourning vs. self-blame"),
       en("Chair work: dialogue between inner parts"),
     ],
-    resources: [book("s6-ch9", 9, "Connecting compassionately with ourselves")],
+    resources: [
+      book("s6-ch9", 9, "Connecting compassionately with ourselves"),
+      rosenbergEpisode("s6-podcast-communicate-with-ourselves", "How We Communicate with Ourselves", "31VbjKJgmuPR68X0eAUtrt"),
+    ],
     exercises: [
       {
         id: "s6-translate-jackal",
@@ -285,7 +315,10 @@ export const sessions: Session[] = [
       en("Empathy vs. deflective responses (sympathy, advice, fixing, educating, interrogating, one-upping)"),
       en("Recognising your own listening habits"),
     ],
-    resources: [book("s7-ch8", 8, "The power of empathy")],
+    resources: [
+      book("s7-ch8", 8, "The power of empathy"),
+      rosenbergEpisode("s7-podcast-power-of-empathy", "The Power of Empathy", "54vjDfY6WGHUoDCZChduI8"),
+    ],
     exercises: [
       {
         id: "s7-notice-habit",
