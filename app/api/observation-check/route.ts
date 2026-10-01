@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import OpenAI from "openai";
 import { AI_MODEL, getOpenAI } from "@/app/lib/openai";
 import {
   OBSERVATION_CHECK_PROMPT,
@@ -7,6 +8,14 @@ import {
 } from "@/app/lib/prompts/observationCheckPrompt";
 
 const MAX_LENGTH = 500;
+
+// Short, non-sensitive hints for the most common OpenAI setup problems.
+const OPENAI_ERROR_HINTS: Record<number, string> = {
+  401: "AI feedback isn't available: the OpenAI API key isn't valid.",
+  403: "AI feedback isn't available: this OpenAI key has no access to the model.",
+  404: "AI feedback isn't available: the AI model wasn't found for this OpenAI account.",
+  429: "AI feedback isn't available right now: OpenAI usage limit or credit reached.",
+};
 
 function isResult(value: unknown): value is ObservationCheckResult {
   if (!value || typeof value !== "object") return false;
@@ -63,7 +72,14 @@ export async function POST(request: Request) {
     }
     return NextResponse.json(parsed);
   } catch (error) {
-    console.error("observation-check failed", error);
+    // Log only status/code/message — never the participant's text.
+    if (error instanceof OpenAI.APIError) {
+      console.error("observation-check failed", { status: error.status, code: error.code, message: error.message });
+      const hint = OPENAI_ERROR_HINTS[error.status ?? 0];
+      if (hint) return NextResponse.json({ error: hint }, { status: 502 });
+    } else {
+      console.error("observation-check failed", error instanceof Error ? error.message : error);
+    }
     return NextResponse.json({ error: "Something went wrong. Please try again." }, { status: 500 });
   }
 }
