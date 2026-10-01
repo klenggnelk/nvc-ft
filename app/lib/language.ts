@@ -24,3 +24,21 @@ export function normalizeLanguage(value: string | null | undefined): Language {
 export function getCopy<T>(copyByLanguage: Record<Language, T>, language: Language): T {
   return copyByLanguage[language] ?? copyByLanguage[DEFAULT_LANGUAGE];
 }
+
+/** Text that always has English and may have other languages (used for course content). */
+export type Localized = { en: string } & Partial<Record<Language, string>>;
+
+/** Picks a language from Localized text, falling back to English when it isn't translated yet. */
+export function localize(text: Localized, language: Language): string {
+  return text[language] ?? text.en;
+}
+
+/** Date-only formatting that gives the same result on the server and in every browser. */
+export function formatSessionDate(date: Date, language: Language): string {
+  return date.toLocaleDateString(language === "no" ? "nb-NO" : "en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    timeZone: "UTC",
+  });
+}

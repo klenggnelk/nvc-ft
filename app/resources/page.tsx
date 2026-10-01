@@ -1,20 +1,26 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/app/context/LanguageContext";
-import { getCopy, type Language } from "@/app/lib/language";
+import { getCopy, localize, type Language } from "@/app/lib/language";
 import { sessions } from "@/content/sessions";
 
-const copyByLanguage: Record<Language, { title: string; intro: string; session: string; empty: string }> = {
+const copyByLanguage: Record<
+  Language,
+  { title: string; intro: string; session: string; recording: string; empty: string }
+> = {
   en: {
     title: "Resources",
-    intro: "Material for each session. More is added as the training goes along.",
+    intro: "Readings and recordings for each session. Recordings are added after each session.",
     session: "Session",
+    recording: "Recording of the topics and exercise instructions",
     empty: "Nothing here yet.",
   },
   no: {
     title: "Ressurser",
-    intro: "Materiell for hver samling. Mer kommer etter hvert.",
+    intro: "Lesestoff og opptak for hver samling. Opptakene legges ut etter hver samling.",
     session: "Samling",
+    recording: "Opptak av temaene og øvelsesinstruksjonene",
     empty: "Ingenting her ennå.",
   },
 };
@@ -30,30 +36,42 @@ export default function ResourcesPage() {
         <p className="text-muted">{copy.intro}</p>
       </header>
       <ol className="space-y-3">
-        {sessions.map((session) => (
-          <li key={session.number} className="rounded-xl border border-border bg-card p-4">
-            <h2 className="font-medium">
-              {copy.session} {session.number}: {session.title[language]}
-            </h2>
-            {session.resources.length === 0 ? (
-              <p className="mt-1 text-sm text-muted">{copy.empty}</p>
-            ) : (
-              <ul className="mt-2 space-y-1 text-sm">
-                {session.resources.map((resource) => (
-                  <li key={resource.id}>
-                    {resource.url ? (
-                      <a href={resource.url} className="text-accent underline-offset-2 hover:underline">
-                        {resource.title[language]}
+        {sessions.map((session) => {
+          const hasContent = session.recordingUrl || session.resources.length > 0;
+          return (
+            <li key={session.number} className="rounded-xl border border-border bg-card p-4">
+              <h2 className="font-medium">
+                <Link href={`/sessions/${session.number}`} className="hover:text-accent">
+                  {copy.session} {session.number}: {localize(session.title, language)}
+                </Link>
+              </h2>
+              {!hasContent ? (
+                <p className="mt-1 text-sm text-muted">{copy.empty}</p>
+              ) : (
+                <ul className="mt-2 space-y-1 text-sm">
+                  {session.recordingUrl && (
+                    <li>
+                      <a href={session.recordingUrl} className="text-accent underline-offset-2 hover:underline">
+                        {copy.recording}
                       </a>
-                    ) : (
-                      resource.title[language]
-                    )}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
+                    </li>
+                  )}
+                  {session.resources.map((resource) => (
+                    <li key={resource.id}>
+                      {resource.url ? (
+                        <a href={resource.url} className="text-accent underline-offset-2 hover:underline">
+                          {localize(resource.title, language)}
+                        </a>
+                      ) : (
+                        localize(resource.title, language)
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })}
       </ol>
     </div>
   );

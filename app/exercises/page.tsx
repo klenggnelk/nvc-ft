@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
+import ExerciseCard from "@/app/components/ExerciseCard";
 import { useLanguage } from "@/app/context/LanguageContext";
-import { getCopy, type Language } from "@/app/lib/language";
+import { getCopy, localize, type Language } from "@/app/lib/language";
 import { sessions } from "@/content/sessions";
-import ObservationCheck from "./ObservationCheck";
 
 const copyByLanguage: Record<Language, { title: string; intro: string; session: string }> = {
   en: {
@@ -24,7 +25,7 @@ export default function ExercisesPage() {
   const withExercises = sessions.filter((session) => session.exercises.length > 0);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <header className="space-y-1">
         <h1 className="text-2xl font-semibold tracking-tight">{copy.title}</h1>
         <p className="text-muted">{copy.intro}</p>
@@ -32,14 +33,12 @@ export default function ExercisesPage() {
       {withExercises.map((session) => (
         <section key={session.number} className="space-y-3">
           <h2 className="text-sm font-medium uppercase tracking-wide text-muted">
-            {copy.session} {session.number}: {session.title[language]}
+            <Link href={`/sessions/${session.number}`} className="hover:text-accent">
+              {copy.session} {session.number}: {localize(session.title, language)}
+            </Link>
           </h2>
           {session.exercises.map((exercise) => (
-            <article key={exercise.id} className="space-y-3 rounded-xl border border-border bg-card p-5">
-              <h3 className="font-medium">{exercise.title[language]}</h3>
-              <p className="text-sm text-muted">{exercise.instructions[language]}</p>
-              {exercise.aiTask === "observation-check" && <ObservationCheck />}
-            </article>
+            <ExerciseCard key={exercise.id} exercise={exercise} />
           ))}
         </section>
       ))}
