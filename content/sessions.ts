@@ -179,6 +179,26 @@ export const sessions: Session[] = [
     resources: [
       book("s2-ch4", 4, "Identifying and expressing feelings"),
       book("s2-ch5", 5, "Taking responsibility for our feelings"),
+      {
+        id: "s2-feelings-needs-inventory",
+        kind: "handout",
+        title: en("Feelings and Needs Inventory (CNVC) — PDF"),
+        url: "https://www.changethegameacademy.org/wp-content/uploads/2025/Toolkits/Feelings%20and%20Needs%20inventory%20-%20CNVC.pdf",
+        note: {
+          en: "Lists of feeling words and universal needs. Useful to keep next to you in every session.",
+          no: "Lister over følelsesord og universelle behov. Nyttig å ha ved siden av seg i alle samlingene.",
+        },
+      },
+      {
+        id: "s2-feelings-vs-faux-feelings",
+        kind: "handout",
+        title: en("Feelings vs. Faux Feelings — PDF"),
+        url: "https://johnkinyon.com/wp-content/uploads/2019/10/Feelings-vs-Faux-Feelings-copy-2.pdf",
+        note: {
+          en: "Translates words like \"ignored\" or \"betrayed\" into the real feelings and needs behind them.",
+          no: "Oversetter ord som «ignorert» eller «forrådt» til de egentlige følelsene og behovene bak.",
+        },
+      },
     ],
     exercises: [
       {
