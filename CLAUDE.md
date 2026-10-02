@@ -18,6 +18,7 @@ Next.js 16 (App Router) · React 19 · TypeScript 5 · Tailwind CSS v4 · ESLint
 - `app/components/` — shared UI
 - `content/sessions.ts` — course content as data: schedule/start date, 2-hour session flow, the 10 sessions (from the trainer team's agenda) → topics, recording link, readings, practices
 - `app/sessions/[number]/` — one page per session (the hub participants use each week)
+- `content/checks.ts` — "Check yourself" rounds per session, built on the 25 CNVC key differentiations (statement → side A/B + short explanation). Played with `app/components/CheckGame.tsx` on each session page and on `/check`. Nothing is stored; no scores as judgement ("we see it the same way / differently").
 
 ## Conventions
 - Participants are ~20 people from different countries who speak English as a second language: write content in plain, short English.

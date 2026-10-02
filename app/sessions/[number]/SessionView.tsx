@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import CheckGame from "@/app/components/CheckGame";
 import ExerciseCard from "@/app/components/ExerciseCard";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { formatSessionDate, getCopy, localize, type Language } from "@/app/lib/language";
+import { checksForSession } from "@/content/checks";
 import { course, getSession, sessionDate, sessionFlow, sessions } from "@/content/sessions";
 
 const copyByLanguage: Record<
@@ -20,6 +22,8 @@ const copyByLanguage: Record<
     podcast: string;
     practise: string;
     practiseIntro: string;
+    check: string;
+    checkIntro: string;
     flow: string;
     min: string;
     previous: string;
@@ -36,6 +40,8 @@ const copyByLanguage: Record<
     bring: "Bring to this session",
     read: "Read and listen",
     podcast: "Podcast",
+    check: "Check yourself",
+    checkIntro: "A short game for after the session. Read each statement and choose what it is. It is for your own learning, not a grade.",
     practise: "Practise this week",
     practiseIntro: "Small practices for the days between sessions. There are no wrong answers — only practice.",
     flow: "How each session runs",
@@ -53,6 +59,8 @@ const copyByLanguage: Record<
     bring: "Ta med til samlingen",
     read: "Les og lytt",
     podcast: "Podkast",
+    check: "Sjekk deg selv",
+    checkIntro: "Et kort spill til etter samlingen. Les hvert utsagn og velg hva det er. Det er for din egen læring, ikke en karakter.",
     practise: "Øv denne uken",
     practiseIntro: "Små øvelser for dagene mellom samlingene. Her finnes ingen feil svar — bare øving.",
     flow: "Slik foregår hver samling",
@@ -71,6 +79,7 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
   const date = sessionDate(session.number);
   const previous = getSession(session.number - 1);
   const next = getSession(session.number + 1);
+  const sessionChecks = checksForSession(session.number);
 
   return (
     <div className="space-y-8">
@@ -168,6 +177,18 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
           </div>
           {session.exercises.map((exercise) => (
             <ExerciseCard key={exercise.id} exercise={exercise} />
+          ))}
+        </section>
+      )}
+
+      {sessionChecks.length > 0 && (
+        <section id="check" className="scroll-mt-6 space-y-3">
+          <div className="space-y-1">
+            <h2 className="text-lg font-semibold">{copy.check}</h2>
+            <p className="text-sm text-muted">{copy.checkIntro}</p>
+          </div>
+          {sessionChecks.map((check) => (
+            <CheckGame key={check.id} check={check} />
           ))}
         </section>
       )}
