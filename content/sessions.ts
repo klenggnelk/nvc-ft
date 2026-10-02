@@ -76,6 +76,8 @@ export type Session = {
   topics: Localized[];
   /** Link to the recording of the topic presentations, added after the session */
   recordingUrl?: string;
+  /** Things participants should print or have ready before the session starts */
+  bring?: Resource[];
   resources: Resource[];
   exercises: Exercise[];
 };
@@ -154,6 +156,18 @@ export const sessions: Session[] = [
   {
     number: 2,
     title: en("Feelings and Needs"),
+    bring: [
+      {
+        id: "s2-picture-needs-cards",
+        kind: "handout",
+        title: en("Picture Needs Cards (The No-Fault Zone) — PDF to print"),
+        url: "https://thenofaultzone.com/cards_picture_needs_print_download_english_2018_merged.pdf",
+        note: {
+          en: "Please print this PDF before the session and have the cards with you.",
+          no: "Skriv ut denne PDF-en før samlingen og ha kortene klare.",
+        },
+      },
+    ],
     subtitle: en("What's alive in us"),
     description: en(
       "Behind every feeling is a need, met or unmet. In this session you'll learn to notice feelings in the body, spot thoughts dressed up as feelings (\"I feel ignored\"), and connect with the universal needs we all share. Many participants say this is where NVC really starts to make sense.",

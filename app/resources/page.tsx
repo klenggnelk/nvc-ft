@@ -15,6 +15,7 @@ const copyByLanguage: Record<
     recording: string;
     empty: string;
     podcast: string;
+    bring: string;
   }
 > = {
   en: {
@@ -25,6 +26,7 @@ const copyByLanguage: Record<
     recording: "Recording of the topics and exercise instructions",
     empty: "Nothing here yet.",
     podcast: "Podcast",
+    bring: "Bring to session",
   },
   no: {
     title: "Ressurser",
@@ -34,15 +36,19 @@ const copyByLanguage: Record<
     recording: "Opptak av temaene og øvelsesinstruksjonene",
     empty: "Ingenting her ennå.",
     podcast: "Podkast",
+    bring: "Ta med",
   },
 };
 
-function ResourceItem({ resource, language }: { resource: Resource; language: Language }) {
+function ResourceItem({ resource, language, bring = false }: { resource: Resource; language: Language; bring?: boolean }) {
   const copy = getCopy(copyByLanguage, language);
   const external = resource.url?.startsWith("http");
 
   return (
     <li>
+      {bring && (
+        <span className="mr-2 rounded-full border border-accent px-2 py-0.5 text-xs font-medium text-accent">{copy.bring}</span>
+      )}
       {resource.kind === "podcast" && (
         <span className="mr-2 rounded-full bg-accent-soft px-2 py-0.5 text-xs text-accent">{copy.podcast}</span>
       )}
@@ -86,7 +92,7 @@ export default function ResourcesPage() {
 
       <ol className="space-y-3">
         {sessions.map((session) => {
-          const hasContent = session.recordingUrl || session.resources.length > 0;
+          const hasContent = session.recordingUrl || session.resources.length > 0 || (session.bring?.length ?? 0) > 0;
           return (
             <li key={session.number} className="rounded-xl border border-border bg-card p-4">
               <h2 className="font-medium">
@@ -105,6 +111,9 @@ export default function ResourcesPage() {
                       </a>
                     </li>
                   )}
+                  {session.bring?.map((item) => (
+                    <ResourceItem key={item.id} resource={item} language={language} bring />
+                  ))}
                   {session.resources.map((resource) => (
                     <ResourceItem key={resource.id} resource={resource} language={language} />
                   ))}

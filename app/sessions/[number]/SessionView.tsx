@@ -15,6 +15,7 @@ const copyByLanguage: Record<
     recording: string;
     recordingLink: string;
     recordingSoon: string;
+    bring: string;
     read: string;
     podcast: string;
     practise: string;
@@ -32,6 +33,7 @@ const copyByLanguage: Record<
     recording: "Missed the session?",
     recordingLink: "Watch the recording of the topics and exercise instructions",
     recordingSoon: "The recording of the topics and exercise instructions will appear here after the session.",
+    bring: "Bring to this session",
     read: "Read and listen",
     podcast: "Podcast",
     practise: "Practise this week",
@@ -48,6 +50,7 @@ const copyByLanguage: Record<
     recording: "Gikk du glipp av samlingen?",
     recordingLink: "Se opptaket av temaene og øvelsesinstruksjonene",
     recordingSoon: "Opptaket av temaene og øvelsesinstruksjonene kommer her etter samlingen.",
+    bring: "Ta med til samlingen",
     read: "Les og lytt",
     podcast: "Podkast",
     practise: "Øv denne uken",
@@ -84,6 +87,31 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
         <p className="text-lg text-muted">{localize(session.subtitle, language)}</p>
         {!date && <p className="text-sm text-muted">{localize(course.schedule, language)}</p>}
       </header>
+
+      {session.bring && session.bring.length > 0 && (
+        <section className="space-y-2 rounded-xl border-2 border-accent bg-card p-5">
+          <h2 className="font-semibold">{copy.bring}</h2>
+          <ul className="space-y-2">
+            {session.bring.map((item) => (
+              <li key={item.id}>
+                {item.url ? (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-accent underline underline-offset-2"
+                  >
+                    {localize(item.title, language)}
+                  </a>
+                ) : (
+                  <span className="font-medium">{localize(item.title, language)}</span>
+                )}
+                {item.note && <p className="text-sm text-muted">{localize(item.note, language)}</p>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <p className="max-w-prose leading-relaxed">{localize(session.description, language)}</p>
 
