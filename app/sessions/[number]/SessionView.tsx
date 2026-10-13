@@ -20,6 +20,7 @@ const copyByLanguage: Record<
     bring: string;
     read: string;
     podcast: string;
+    takeaways: string;
     practise: string;
     practiseIntro: string;
     check: string;
@@ -40,6 +41,7 @@ const copyByLanguage: Record<
     bring: "Bring to this session",
     read: "Read and listen",
     podcast: "Podcast",
+    takeaways: "Key takeaways",
     check: "Check yourself",
     checkIntro: "A short game for after the session. Read each statement and choose what it is. It is for your own learning, not a grade.",
     practise: "Practise this week",
@@ -59,6 +61,7 @@ const copyByLanguage: Record<
     bring: "Ta med til samlingen",
     read: "Les og lytt",
     podcast: "Podkast",
+    takeaways: "Viktige poeng",
     check: "Sjekk deg selv",
     checkIntro: "Et kort spill til etter samlingen. Les hvert utsagn og velg hva det er. Det er for din egen læring, ikke en karakter.",
     practise: "Øv denne uken",
@@ -166,6 +169,12 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
               </li>
             ))}
           </ul>
+          {session.takeaways && (
+            <div className="mt-3 space-y-1 rounded-lg bg-accent-soft p-4">
+              <h3 className="text-sm font-semibold">{copy.takeaways}</h3>
+              <p className="max-w-prose text-sm leading-relaxed">{localize(session.takeaways, language)}</p>
+            </div>
+          )}
         </section>
       )}
 

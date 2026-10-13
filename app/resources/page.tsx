@@ -16,6 +16,7 @@ const copyByLanguage: Record<
     empty: string;
     podcast: string;
     bring: string;
+    takeaways: string;
   }
 > = {
   en: {
@@ -27,6 +28,7 @@ const copyByLanguage: Record<
     empty: "Nothing here yet.",
     podcast: "Podcast",
     bring: "Bring to session",
+    takeaways: "Key takeaways",
   },
   no: {
     title: "Ressurser",
@@ -37,6 +39,7 @@ const copyByLanguage: Record<
     empty: "Ingenting her ennå.",
     podcast: "Podkast",
     bring: "Ta med",
+    takeaways: "Viktige poeng",
   },
 };
 
@@ -103,6 +106,7 @@ export default function ResourcesPage() {
               {!hasContent ? (
                 <p className="mt-1 text-sm text-muted">{copy.empty}</p>
               ) : (
+                <>
                 <ul className="mt-2 space-y-2 text-sm">
                   {session.recordingUrl && (
                     <li>
@@ -118,6 +122,13 @@ export default function ResourcesPage() {
                     <ResourceItem key={resource.id} resource={resource} language={language} />
                   ))}
                 </ul>
+                {session.takeaways && (
+                  <details className="mt-3 text-sm">
+                    <summary className="cursor-pointer font-medium text-accent">{copy.takeaways}</summary>
+                    <p className="mt-2 max-w-prose leading-relaxed">{localize(session.takeaways, language)}</p>
+                  </details>
+                )}
+                </>
               )}
             </li>
           );
