@@ -144,7 +144,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "NVC is a way of focusing our attention so that we can give, and receive, from the heart. It has two sides: expressing honestly how we are, and receiving with empathy how others are, without blame or criticism. Both sides use four parts: observations, feelings, needs and requests. Rosenberg shows how much of our everyday language blocks compassion: moralistic judgments, comparisons, denying responsibility (\"I had to\"), demands and deserve thinking. We learned these habits, so we can also unlearn them. The first step is to see clearly: to say what happened, as a camera would, without mixing in our evaluation. The philosopher Krishnamurti called observing without evaluating the highest form of human intelligence. In the podcast you can hear Marshall introduce NVC in his own words.",
     ),
-    song: { title: "What Would a Camera See", sunoId: "757e9fbc-50e5-4d6b-a17b-ed1863515b20", url: "https://suno.com/s/MqeifKFyk8CaQo1W" },
+    song: { title: "What Would a Camera See", sunoId: "3d8db40e-88fb-4fab-a14f-5e79e106959d", url: "https://suno.com/s/FIamPpoOzR267ZFV" },
     resources: [
       book("s1-ch1", 1, "Giving from the heart"),
       book("s1-ch2", 2, "Communication that blocks compassion"),
