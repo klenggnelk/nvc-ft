@@ -285,6 +285,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Rosenberg suggests making requests in positive action language: say what we do want, not what we don't want, and be concrete enough that the other person knows what to do. When we are not sure we were understood, we can ask the other person to tell us what they heard. The big difference in this chapter is between a request and a demand. It is not in the words. It shows in how we respond when the other person says no. If we can listen with empathy to what stops them from saying yes, it was a request. This does not mean giving up on our need. The aim of NVC is not to get our way, but a relationship based on honesty and empathy, where everyone's needs matter.",
     ),
+    song: { title: "A Question, Not a Cage", sunoId: "38dd63ae-2d21-4620-9afe-37faaaab7aaa", url: "https://suno.com/s/7L39aGKld93n6xM5" },
     resources: [book("s4-ch6", 6, "Requesting that which would enrich life")],
     exercises: [
       {
@@ -350,6 +351,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Rosenberg sees the way we treat ourselves as perhaps the most important use of NVC. When we make mistakes, our inner voice often judges: \"I'm so stupid\", \"I should have…\". NVC invites us to translate these self-judgments into feelings and needs. In NVC mourning, we connect with the needs that were not met by what we did. In self-forgiveness, we connect with the needs we were trying to meet when we did it. Change then comes from care for ourselves and others, not from shame or guilt. Rosenberg also suggests turning \"I have to\" into \"I choose to … because I want …\", so that we act from the joy of contributing to life, rather than from fear, guilt, shame or duty.",
     ),
+    song: { title: "Face Myself", sunoId: "c18de4a6-010f-4c16-9632-8337510852b3", url: "https://suno.com/s/3a6VYVB8N1wQkEi7" },
     resources: [
       book("s6-ch9", 9, "Connecting compassionately with ourselves"),
       rosenbergEpisode("s6-podcast-communicate-with-ourselves", "How We Communicate with Ourselves", "31VbjKJgmuPR68X0eAUtrt"),
@@ -385,6 +387,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Chapter 8 shows what empathy can do. Being heard can heal, and it makes it easier to be vulnerable. Empathy can even help in dangerous moments, as Rosenberg's stories show. When someone says \"no\", empathy keeps us from taking it personally: we listen for the feelings and needs behind the no, for what the person wants that stops them from saying yes. Empathy can also bring a lifeless conversation back to life, and help us stay present with silence. The book also names habits that block empathy, even when we mean well: advising, one-upping, educating, consoling, storytelling, shutting down and others. Noticing our own favourite habits, without judging them, is the first step to staying with the other person a little longer.",
     ),
+    song: { title: "Let the Silence Be", sunoId: "523c4d95-facd-42cf-b7e4-202444e67112", url: "https://suno.com/s/ENrqWwuWyKm1TBkL" },
     resources: [
       book("s7-ch8", 8, "The power of empathy"),
       rosenbergEpisode("s7-podcast-power-of-empathy", "The Power of Empathy", "54vjDfY6WGHUoDCZChduI8"),
@@ -421,6 +424,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Rosenberg's key point about anger: what others do is the stimulus, never the cause. The cause lies in our own thinking, in judgments about what others should or shouldn't do. Every anger has a life-serving core: a need that is not met. To express anger fully, he suggests four steps: stop and breathe, identify the judgmental thoughts, connect with the needs behind them, and then express our feelings and unmet needs. Often we need to offer the other person empathy first, because the more we hear them, the more they will be able to hear us. Blaming and punishing are only surface ways of expressing anger. And we need to take our time, because habits of judging run deep.",
     ),
+    song: { title: "Stop and Breathe", sunoId: "98e50130-de26-46f2-b4db-8fe09bc86271", url: "https://suno.com/s/Ns5aQRcYzWQTNQUd" },
     resources: [book("s8-ch10", 10, "Expressing anger fully")],
     exercises: [
       {
