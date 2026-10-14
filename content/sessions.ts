@@ -424,7 +424,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Rosenberg's key point about anger: what others do is the stimulus, never the cause. The cause lies in our own thinking, in judgments about what others should or shouldn't do. Every anger has a life-serving core: a need that is not met. To express anger fully, he suggests four steps: stop and breathe, identify the judgmental thoughts, connect with the needs behind them, and then express our feelings and unmet needs. Often we need to offer the other person empathy first, because the more we hear them, the more they will be able to hear us. Blaming and punishing are only surface ways of expressing anger. And we need to take our time, because habits of judging run deep.",
     ),
-    song: { title: "Stop and Breathe", sunoId: "98e50130-de26-46f2-b4db-8fe09bc86271", url: "https://suno.com/s/Ns5aQRcYzWQTNQUd" },
+    song: { title: "Stop and Breathe", sunoId: "ec748411-f48d-4771-9629-dc30eb10ac04", url: "https://suno.com/s/C64uN0l04Ze1oUA9" },
     resources: [book("s8-ch10", 10, "Expressing anger fully")],
     exercises: [
       {
