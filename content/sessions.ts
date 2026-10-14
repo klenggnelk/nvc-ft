@@ -68,6 +68,14 @@ export type Exercise = {
   aiTask?: "observation-check";
 };
 
+export type Song = {
+  title: string;
+  /** Suno song id (from suno.com/song/<id>), used for the embedded player */
+  sunoId: string;
+  /** Share link, shown as a fallback "Open in Suno" link */
+  url: string;
+};
+
 export type Session = {
   number: number;
   title: Localized;
@@ -76,6 +84,8 @@ export type Session = {
   topics: Localized[];
   /** One-paragraph summary of the key takeaways from this session's resources */
   takeaways?: Localized;
+  /** A song (made with Suno) that sums up the session's learnings */
+  song?: Song;
   /** Link to the recording of the topic presentations, added after the session */
   recordingUrl?: string;
   /** Things participants should print or have ready before the session starts */
@@ -134,6 +144,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "NVC is a way of focusing our attention so that we can give, and receive, from the heart. It has two sides: expressing honestly how we are, and receiving with empathy how others are, without blame or criticism. Both sides use four parts: observations, feelings, needs and requests. Rosenberg shows how much of our everyday language blocks compassion: moralistic judgments, comparisons, denying responsibility (\"I had to\"), demands and deserve thinking. We learned these habits, so we can also unlearn them. The first step is to see clearly: to say what happened, as a camera would, without mixing in our evaluation. The philosopher Krishnamurti called observing without evaluating the highest form of human intelligence. In the podcast you can hear Marshall introduce NVC in his own words.",
     ),
+    song: { title: "What Would a Camera See", sunoId: "757e9fbc-50e5-4d6b-a17b-ed1863515b20", url: "https://suno.com/s/MqeifKFyk8CaQo1W" },
     resources: [
       book("s1-ch1", 1, "Giving from the heart"),
       book("s1-ch2", 2, "Communication that blocks compassion"),
@@ -184,6 +195,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Our feelings tell us whether our needs are being met. Rosenberg asks us to build a rich vocabulary for feelings, and to notice when \"I feel…\" is really a thought: \"I feel that you…\", or words like ignored, misunderstood or betrayed, which say what we think others are doing to us. The Feelings vs. Faux Feelings list helps us translate those words. The key message of chapter 5 is that what others do may be the stimulus of our feelings, but never the cause. The cause is our own needs. When we hear a hard message, we have four options: blame ourselves, blame the other person, sense our own feelings and needs, or sense theirs. The Feelings and Needs Inventory and the picture needs cards help us find words for what is alive in us.",
     ),
+    song: { title: "Underneath the Words", sunoId: "ef2fa07a-dc00-47e3-8c87-3bee2319c21a", url: "https://suno.com/s/62vdNUAnl363TEhs" },
     resources: [
       book("s2-ch4", 4, "Identifying and expressing feelings"),
       book("s2-ch5", 5, "Taking responsibility for our feelings"),
@@ -236,6 +248,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Empathy is a respectful understanding of what another person is experiencing. Our habit is to advise, reassure or explain our own view. Empathy asks us instead to empty our mind and listen with our whole being. A Buddhist saying puts it simply: \"Don't just do something, stand there.\" Whatever words people use, even judgments or complaints, we listen for their feelings and needs, and we can check our understanding by reflecting it back as a question. We stay with the other person until they have said what they need to say. A release of tension, or the words coming to an end, are signs that they feel heard. And when our own pain makes listening impossible, it is a sign that we need empathy ourselves first.",
     ),
+    song: { title: "Stand There", sunoId: "b9bfefad-92ea-47d0-abe0-6814223ca249", url: "https://suno.com/s/OK9gOkBf7PjEWTZG" },
     resources: [
       book("s3-ch7", 7, "Receiving empathically"),
       rosenbergEpisode("s3-podcast-dynamics-of-empathy", "Dynamics of Empathy", "5v9tSglQutTmSDv0vwk2d2"),

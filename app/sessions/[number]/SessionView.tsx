@@ -3,6 +3,7 @@
 import Link from "next/link";
 import CheckGame from "@/app/components/CheckGame";
 import ExerciseCard from "@/app/components/ExerciseCard";
+import SongPlayer from "@/app/components/SongPlayer";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { formatSessionDate, getCopy, localize, type Language } from "@/app/lib/language";
 import { checksForSession } from "@/content/checks";
@@ -177,6 +178,8 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
           )}
         </section>
       )}
+
+      {session.song && <SongPlayer song={session.song} />}
 
       {session.exercises.length > 0 && (
         <section className="space-y-3">
