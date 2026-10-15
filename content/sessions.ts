@@ -74,6 +74,8 @@ export type Song = {
   sunoId: string;
   /** Share link, shown as a fallback "Open in Suno" link */
   url: string;
+  /** Chorus lyrics, one line per array item, shown in a fold-out under the player */
+  chorus?: string[];
 };
 
 export type Session = {
@@ -144,7 +146,18 @@ export const sessions: Session[] = [
     takeaways: en(
       "NVC is a way of focusing our attention so that we can give, and receive, from the heart. It has two sides: expressing honestly how we are, and receiving with empathy how others are, without blame or criticism. Both sides use four parts: observations, feelings, needs and requests. Rosenberg shows how much of our everyday language blocks compassion: moralistic judgments, comparisons, denying responsibility (\"I had to\"), demands and deserve thinking. We learned these habits, so we can also unlearn them. The first step is to see clearly: to say what happened, as a camera would, without mixing in our evaluation. The philosopher Krishnamurti called observing without evaluating the highest form of human intelligence. In the podcast you can hear Marshall introduce NVC in his own words.",
     ),
-    song: { title: "What Would a Camera See", sunoId: "3d8db40e-88fb-4fab-a14f-5e79e106959d", url: "https://suno.com/s/FIamPpoOzR267ZFV" },
+    song: { title: "What Would a Camera See", sunoId: "3d8db40e-88fb-4fab-a14f-5e79e106959d", url: "https://suno.com/s/FIamPpoOzR267ZFV",
+      chorus: [
+        "What would a camera see?",
+        "Not lazy, not a mess:",
+        "three cups, a shirt, a muddy shoe,",
+        "no more and no less.",
+        "When I say what I see,",
+        "the judging falls away,",
+        "and maybe you can hear me,",
+        "and maybe you will stay.",
+      ],
+    },
     resources: [
       book("s1-ch1", 1, "Giving from the heart"),
       book("s1-ch2", 2, "Communication that blocks compassion"),
@@ -195,7 +208,18 @@ export const sessions: Session[] = [
     takeaways: en(
       "Our feelings tell us whether our needs are being met. Rosenberg asks us to build a rich vocabulary for feelings, and to notice when \"I feel…\" is really a thought: \"I feel that you…\", or words like ignored, misunderstood or betrayed, which say what we think others are doing to us. The Feelings vs. Faux Feelings list helps us translate those words. The key message of chapter 5 is that what others do may be the stimulus of our feelings, but never the cause. The cause is our own needs. When we hear a hard message, we have four options: blame ourselves, blame the other person, sense our own feelings and needs, or sense theirs. The Feelings and Needs Inventory and the picture needs cards help us find words for what is alive in us.",
     ),
-    song: { title: "Underneath the Words", sunoId: "ef2fa07a-dc00-47e3-8c87-3bee2319c21a", url: "https://suno.com/s/62vdNUAnl363TEhs" },
+    song: { title: "Underneath the Words", sunoId: "ef2fa07a-dc00-47e3-8c87-3bee2319c21a", url: "https://suno.com/s/62vdNUAnl363TEhs",
+      chorus: [
+        "Underneath the words I throw,",
+        "something soft is true:",
+        "a feeling that I didn't show,",
+        "a need I hid from you.",
+        "So I stop, and I breathe,",
+        "I listen to my chest.",
+        "The story's loud, but underneath",
+        "I know what I need best.",
+      ],
+    },
     resources: [
       book("s2-ch4", 4, "Identifying and expressing feelings"),
       book("s2-ch5", 5, "Taking responsibility for our feelings"),
@@ -248,7 +272,18 @@ export const sessions: Session[] = [
     takeaways: en(
       "Empathy is a respectful understanding of what another person is experiencing. Our habit is to advise, reassure or explain our own view. Empathy asks us instead to empty our mind and listen with our whole being. A Buddhist saying puts it simply: \"Don't just do something, stand there.\" Whatever words people use, even judgments or complaints, we listen for their feelings and needs, and we can check our understanding by reflecting it back as a question. We stay with the other person until they have said what they need to say. A release of tension, or the words coming to an end, are signs that they feel heard. And when our own pain makes listening impossible, it is a sign that we need empathy ourselves first.",
     ),
-    song: { title: "Stand There", sunoId: "30c1324c-b35f-43d0-ab34-eebbc7c47cb5", url: "https://suno.com/s/1KmD7mO4D33ImiCh" },
+    song: { title: "Stand There", sunoId: "30c1324c-b35f-43d0-ab34-eebbc7c47cb5", url: "https://suno.com/s/1KmD7mO4D33ImiCh",
+      chorus: [
+        "Don't just do something, stand there.",
+        "Don't fix, don't rush, don't run.",
+        "Just be here with the one in pain",
+        "until the words are done.",
+        "Listen past the words they say,",
+        "the anger and the blame,",
+        "for what they feel and what they need,",
+        "and gently guess its name.",
+      ],
+    },
     resources: [
       book("s3-ch7", 7, "Receiving empathically"),
       rosenbergEpisode("s3-podcast-dynamics-of-empathy", "Dynamics of Empathy", "5v9tSglQutTmSDv0vwk2d2"),
@@ -285,7 +320,18 @@ export const sessions: Session[] = [
     takeaways: en(
       "Rosenberg suggests making requests in positive action language: say what we do want, not what we don't want, and be concrete enough that the other person knows what to do. When we are not sure we were understood, we can ask the other person to tell us what they heard. The big difference in this chapter is between a request and a demand. It is not in the words. It shows in how we respond when the other person says no. If we can listen with empathy to what stops them from saying yes, it was a request. This does not mean giving up on our need. The aim of NVC is not to get our way, but a relationship based on honesty and empathy, where everyone's needs matter.",
     ),
-    song: { title: "A Question, Not a Cage", sunoId: "38dd63ae-2d21-4620-9afe-37faaaab7aaa", url: "https://suno.com/s/7L39aGKld93n6xM5" },
+    song: { title: "A Question, Not a Cage", sunoId: "38dd63ae-2d21-4620-9afe-37faaaab7aaa", url: "https://suno.com/s/7L39aGKld93n6xM5",
+      chorus: [
+        "So I ask you, clear and kind,",
+        "for one thing you can do,",
+        "and if your answer is a \"no\",",
+        "I want to hear that too.",
+        "It's a question, not a cage,",
+        "an open door, not a wall,",
+        "and how I meet your \"no\"",
+        "shows if I asked at all.",
+      ],
+    },
     resources: [book("s4-ch6", 6, "Requesting that which would enrich life")],
     exercises: [
       {
@@ -351,7 +397,18 @@ export const sessions: Session[] = [
     takeaways: en(
       "Rosenberg sees the way we treat ourselves as perhaps the most important use of NVC. When we make mistakes, our inner voice often judges: \"I'm so stupid\", \"I should have…\". NVC invites us to translate these self-judgments into feelings and needs. In NVC mourning, we connect with the needs that were not met by what we did. In self-forgiveness, we connect with the needs we were trying to meet when we did it. Change then comes from care for ourselves and others, not from shame or guilt. Rosenberg also suggests turning \"I have to\" into \"I choose to … because I want …\", so that we act from the joy of contributing to life, rather than from fear, guilt, shame or duty.",
     ),
-    song: { title: "Face Myself", sunoId: "96579c9c-6dfd-4014-a3c8-7254a6171708", url: "https://suno.com/s/W9KOXgZFx0ZIaj2h" },
+    song: { title: "Face Myself", sunoId: "96579c9c-6dfd-4014-a3c8-7254a6171708", url: "https://suno.com/s/W9KOXgZFx0ZIaj2h",
+      chorus: [
+        "So let me turn and face myself",
+        "the way I'd face a friend.",
+        "Behind each \"should\" a need is crying,",
+        "and needs can help me mend.",
+        "I'll mourn the thing I couldn't give,",
+        "forgive the choice I made,",
+        "and grow from care, and not because",
+        "I'm guilty or afraid.",
+      ],
+    },
     resources: [
       book("s6-ch9", 9, "Connecting compassionately with ourselves"),
       rosenbergEpisode("s6-podcast-communicate-with-ourselves", "How We Communicate with Ourselves", "31VbjKJgmuPR68X0eAUtrt"),
@@ -387,7 +444,18 @@ export const sessions: Session[] = [
     takeaways: en(
       "Chapter 8 shows what empathy can do. Being heard can heal, and it makes it easier to be vulnerable. Empathy can even help in dangerous moments, as Rosenberg's stories show. When someone says \"no\", empathy keeps us from taking it personally: we listen for the feelings and needs behind the no, for what the person wants that stops them from saying yes. Empathy can also bring a lifeless conversation back to life, and help us stay present with silence. The book also names habits that block empathy, even when we mean well: advising, one-upping, educating, consoling, storytelling, shutting down and others. Noticing our own favourite habits, without judging them, is the first step to staying with the other person a little longer.",
     ),
-    song: { title: "Let the Silence Be", sunoId: "a0d35ec4-a54a-474d-8afe-ca0ae37dd7e5", url: "https://suno.com/s/GukcN1ntqeStWWbE" },
+    song: { title: "Let the Silence Be", sunoId: "a0d35ec4-a54a-474d-8afe-ca0ae37dd7e5", url: "https://suno.com/s/GukcN1ntqeStWWbE",
+      chorus: [
+        "Behind your \"no\" there is a \"yes\"",
+        "to something deep and true.",
+        "I won't take it personally,",
+        "I'll get curious about you.",
+        "And if the room goes quiet, love,",
+        "I'll let the silence be,",
+        "'cause being heard can heal a heart",
+        "and set the spirit free.",
+      ],
+    },
     resources: [
       book("s7-ch8", 8, "The power of empathy"),
       rosenbergEpisode("s7-podcast-power-of-empathy", "The Power of Empathy", "54vjDfY6WGHUoDCZChduI8"),
@@ -424,7 +492,18 @@ export const sessions: Session[] = [
     takeaways: en(
       "Rosenberg's key point about anger: what others do is the stimulus, never the cause. The cause lies in our own thinking, in judgments about what others should or shouldn't do. Every anger has a life-serving core: a need that is not met. To express anger fully, he suggests four steps: stop and breathe, identify the judgmental thoughts, connect with the needs behind them, and then express our feelings and unmet needs. Often we need to offer the other person empathy first, because the more we hear them, the more they will be able to hear us. Blaming and punishing are only surface ways of expressing anger. And we need to take our time, because habits of judging run deep.",
     ),
-    song: { title: "Stop and Breathe", sunoId: "ec748411-f48d-4771-9629-dc30eb10ac04", url: "https://suno.com/s/C64uN0l04Ze1oUA9" },
+    song: { title: "Stop and Breathe", sunoId: "ec748411-f48d-4771-9629-dc30eb10ac04", url: "https://suno.com/s/C64uN0l04Ze1oUA9",
+      chorus: [
+        "So I stop, and I breathe,",
+        "I hear my judging mind.",
+        "\"A thief, a snake,\" but underneath",
+        "there's something else to find.",
+        "What he did was just the spark,",
+        "my thoughts are what burn hot,",
+        "and every anger, at its heart,",
+        "is a need that I forgot.",
+      ],
+    },
     resources: [book("s8-ch10", 10, "Expressing anger fully")],
     exercises: [
       {
