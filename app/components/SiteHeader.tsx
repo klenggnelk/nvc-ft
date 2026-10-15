@@ -2,12 +2,16 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "@/app/components/Logo";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { getCopy, LANGUAGE_LABELS, SUPPORTED_LANGUAGES, type Language } from "@/app/lib/language";
 
-const copyByLanguage: Record<Language, { home: string; resources: string; exercises: string; check: string; language: string }> = {
-  en: { home: "Home", resources: "Resources", exercises: "Exercises", check: "Check yourself", language: "Language" },
-  no: { home: "Hjem", resources: "Ressurser", exercises: "Øvelser", check: "Sjekk deg selv", language: "Språk" },
+const copyByLanguage: Record<
+  Language,
+  { brand: string; home: string; resources: string; exercises: string; check: string; language: string }
+> = {
+  en: { brand: "NVC Foundation Training", home: "Home", resources: "Resources", exercises: "Exercises", check: "Check yourself", language: "Language" },
+  no: { brand: "IK grunnkurs", home: "Hjem", resources: "Ressurser", exercises: "Øvelser", check: "Sjekk deg selv", language: "Språk" },
 };
 
 export default function SiteHeader() {
@@ -24,8 +28,28 @@ export default function SiteHeader() {
 
   return (
     <header className="border-b border-border bg-card">
-      <div className="mx-auto flex w-full max-w-3xl flex-wrap items-center justify-between gap-3 px-4 py-3">
-        <nav className="flex flex-wrap gap-1 text-sm">
+      <div className="mx-auto w-full max-w-3xl space-y-2 px-4 py-3">
+        <div className="flex items-center justify-between gap-3">
+          <Link href="/" className="flex items-center gap-2 text-accent">
+            <Logo className="h-9 w-9 shrink-0" />
+            <span className="font-semibold tracking-tight text-foreground">{copy.brand}</span>
+          </Link>
+          <label className="flex items-center gap-2 text-sm text-muted">
+            <span className="sr-only">{copy.language}</span>
+            <select
+              value={language}
+              onChange={(event) => setLanguage(event.target.value as Language)}
+              className="rounded-md border border-border bg-card px-2 py-1 text-foreground"
+            >
+              {SUPPORTED_LANGUAGES.map((code) => (
+                <option key={code} value={code}>
+                  {LANGUAGE_LABELS[code]}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+        <nav className="-ml-3 flex flex-wrap gap-1 text-sm">
           {links.map((link) => {
             const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
             return (
@@ -41,20 +65,6 @@ export default function SiteHeader() {
             );
           })}
         </nav>
-        <label className="flex items-center gap-2 text-sm text-muted">
-          <span className="sr-only">{copy.language}</span>
-          <select
-            value={language}
-            onChange={(event) => setLanguage(event.target.value as Language)}
-            className="rounded-md border border-border bg-card px-2 py-1 text-foreground"
-          >
-            {SUPPORTED_LANGUAGES.map((code) => (
-              <option key={code} value={code}>
-                {LANGUAGE_LABELS[code]}
-              </option>
-            ))}
-          </select>
-        </label>
       </div>
     </header>
   );
