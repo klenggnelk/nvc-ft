@@ -30,9 +30,9 @@ export default function SiteHeader() {
     <header className="border-b border-border bg-card">
       <div className="mx-auto w-full max-w-3xl space-y-2 px-4 py-3">
         <div className="flex items-center justify-between gap-3">
-          <Link href="/" className="flex items-center gap-2 text-accent">
-            <Logo className="h-9 w-9 shrink-0" />
-            <span className="font-semibold tracking-tight text-foreground">{copy.brand}</span>
+          <Link href="/" className="flex items-center gap-3">
+            <Logo className="h-11 w-auto shrink-0" />
+            <span className="font-serif text-lg leading-tight tracking-wide text-foreground">{copy.brand}</span>
           </Link>
           <label className="flex items-center gap-2 text-sm text-muted">
             <span className="sr-only">{copy.language}</span>
