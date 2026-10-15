@@ -248,7 +248,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Empathy is a respectful understanding of what another person is experiencing. Our habit is to advise, reassure or explain our own view. Empathy asks us instead to empty our mind and listen with our whole being. A Buddhist saying puts it simply: \"Don't just do something, stand there.\" Whatever words people use, even judgments or complaints, we listen for their feelings and needs, and we can check our understanding by reflecting it back as a question. We stay with the other person until they have said what they need to say. A release of tension, or the words coming to an end, are signs that they feel heard. And when our own pain makes listening impossible, it is a sign that we need empathy ourselves first.",
     ),
-    song: { title: "Stand There", sunoId: "b9bfefad-92ea-47d0-abe0-6814223ca249", url: "https://suno.com/s/OK9gOkBf7PjEWTZG" },
+    song: { title: "Stand There", sunoId: "30c1324c-b35f-43d0-ab34-eebbc7c47cb5", url: "https://suno.com/s/1KmD7mO4D33ImiCh" },
     resources: [
       book("s3-ch7", 7, "Receiving empathically"),
       rosenbergEpisode("s3-podcast-dynamics-of-empathy", "Dynamics of Empathy", "5v9tSglQutTmSDv0vwk2d2"),
@@ -351,7 +351,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Rosenberg sees the way we treat ourselves as perhaps the most important use of NVC. When we make mistakes, our inner voice often judges: \"I'm so stupid\", \"I should have…\". NVC invites us to translate these self-judgments into feelings and needs. In NVC mourning, we connect with the needs that were not met by what we did. In self-forgiveness, we connect with the needs we were trying to meet when we did it. Change then comes from care for ourselves and others, not from shame or guilt. Rosenberg also suggests turning \"I have to\" into \"I choose to … because I want …\", so that we act from the joy of contributing to life, rather than from fear, guilt, shame or duty.",
     ),
-    song: { title: "Face Myself", sunoId: "c18de4a6-010f-4c16-9632-8337510852b3", url: "https://suno.com/s/3a6VYVB8N1wQkEi7" },
+    song: { title: "Face Myself", sunoId: "96579c9c-6dfd-4014-a3c8-7254a6171708", url: "https://suno.com/s/W9KOXgZFx0ZIaj2h" },
     resources: [
       book("s6-ch9", 9, "Connecting compassionately with ourselves"),
       rosenbergEpisode("s6-podcast-communicate-with-ourselves", "How We Communicate with Ourselves", "31VbjKJgmuPR68X0eAUtrt"),
