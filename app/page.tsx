@@ -30,7 +30,7 @@ const copyByLanguage: Record<
     ],
   },
   no: {
-    title: "IK grunnkurs",
+    title: "IVK grunnkurs",
     intro:
       "En følgesvenn gjennom de ti samlingene. Se hva hver samling handler om, se opptaket hvis du gikk glipp av en, og øv mellom samlingene.",
     sessionsTitle: "De ti samlingene",

@@ -17,7 +17,7 @@ const copyByLanguage: Record<Language, { title: string; intro: string; how: stri
   no: {
     title: "Sjekk deg selv",
     intro: "Korte spill for å merke hva du har tatt inn — for din egen læring, ikke en karakter.",
-    how: "Hver runde handler om én nøkkeldifferensiering i IK. Les et utsagn, velg hva det er, og se hvordan vi ville sortert det og hvorfor.",
+    how: "Hver runde handler om én nøkkeldifferensiering i IVK. Les et utsagn, velg hva det er, og se hvordan vi ville sortert det og hvorfor.",
     session: "Samling",
   },
 };

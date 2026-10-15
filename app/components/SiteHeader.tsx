@@ -11,7 +11,7 @@ const copyByLanguage: Record<
   { brand: string; home: string; resources: string; exercises: string; check: string; language: string }
 > = {
   en: { brand: "NVC Foundation Training", home: "Home", resources: "Resources", exercises: "Exercises", check: "Check yourself", language: "Language" },
-  no: { brand: "IK grunnkurs", home: "Hjem", resources: "Ressurser", exercises: "Øvelser", check: "Sjekk deg selv", language: "Språk" },
+  no: { brand: "IVK grunnkurs", home: "Hjem", resources: "Ressurser", exercises: "Øvelser", check: "Sjekk deg selv", language: "Språk" },
 };
 
 export default function SiteHeader() {
