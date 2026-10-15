@@ -387,7 +387,7 @@ export const sessions: Session[] = [
     takeaways: en(
       "Chapter 8 shows what empathy can do. Being heard can heal, and it makes it easier to be vulnerable. Empathy can even help in dangerous moments, as Rosenberg's stories show. When someone says \"no\", empathy keeps us from taking it personally: we listen for the feelings and needs behind the no, for what the person wants that stops them from saying yes. Empathy can also bring a lifeless conversation back to life, and help us stay present with silence. The book also names habits that block empathy, even when we mean well: advising, one-upping, educating, consoling, storytelling, shutting down and others. Noticing our own favourite habits, without judging them, is the first step to staying with the other person a little longer.",
     ),
-    song: { title: "Let the Silence Be", sunoId: "523c4d95-facd-42cf-b7e4-202444e67112", url: "https://suno.com/s/ENrqWwuWyKm1TBkL" },
+    song: { title: "Let the Silence Be", sunoId: "a0d35ec4-a54a-474d-8afe-ca0ae37dd7e5", url: "https://suno.com/s/GukcN1ntqeStWWbE" },
     resources: [
       book("s7-ch8", 8, "The power of empathy"),
       rosenbergEpisode("s7-podcast-power-of-empathy", "The Power of Empathy", "54vjDfY6WGHUoDCZChduI8"),
