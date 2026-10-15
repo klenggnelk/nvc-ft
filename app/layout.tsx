@@ -17,6 +17,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "NVC Foundation Training",
   description: "Resources, exercises and self-checks for participants in the NVC Foundation Training.",
+  // Short name when the app is saved to a phone's home screen (iOS); Android uses app/manifest.ts
+  appleWebApp: { title: "NVC Edu" },
 };
 
 export default function RootLayout({
