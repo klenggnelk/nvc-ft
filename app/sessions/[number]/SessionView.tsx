@@ -128,6 +128,20 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
 
       <p className="max-w-prose leading-relaxed">{localize(session.description, language)}</p>
 
+      <details className="rounded-xl border border-border bg-card p-5">
+        <summary className="cursor-pointer font-medium">{copy.flow}</summary>
+        <ol className="mt-3 space-y-1 text-sm">
+          {sessionFlow.map((step, index) => (
+            <li key={index} className="flex gap-3">
+              <span className="w-12 shrink-0 text-muted">
+                {step.minutes} {copy.min}
+              </span>
+              <span>{localize(step.label, language)}</span>
+            </li>
+          ))}
+        </ol>
+      </details>
+
       <section className="space-y-2">
         <h2 className="text-lg font-semibold">{copy.explore}</h2>
         <ul className="list-disc space-y-1 pl-5">
@@ -204,20 +218,6 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
           ))}
         </section>
       )}
-
-      <details className="rounded-xl border border-border bg-card p-5">
-        <summary className="cursor-pointer font-medium">{copy.flow}</summary>
-        <ol className="mt-3 space-y-1 text-sm">
-          {sessionFlow.map((step, index) => (
-            <li key={index} className="flex gap-3">
-              <span className="w-12 shrink-0 text-muted">
-                {step.minutes} {copy.min}
-              </span>
-              <span>{localize(step.label, language)}</span>
-            </li>
-          ))}
-        </ol>
-      </details>
 
       <nav className="flex justify-between gap-4 border-t border-border pt-4 text-sm">
         {previous ? (
