@@ -12,7 +12,7 @@ export default function ExerciseCard({ exercise }: { exercise: Exercise }) {
   return (
     <article className="space-y-3 rounded-xl border border-border bg-card p-5">
       <h3 className="font-medium">{localize(exercise.title, language)}</h3>
-      <p className="text-sm leading-relaxed text-muted">{localize(exercise.instructions, language)}</p>
+      <p className="whitespace-pre-line text-sm leading-relaxed text-muted">{localize(exercise.instructions, language)}</p>
       {exercise.aiTask === "observation-check" && <ObservationCheck />}
     </article>
   );

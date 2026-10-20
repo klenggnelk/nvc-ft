@@ -162,6 +162,22 @@ export const sessions: Session[] = [
     ],
     exercises: [
       {
+        id: "s1-mourn-celebrate",
+        title: { en: "From the session: mourning and celebrating", no: "Fra samlingen: sorg og feiring" },
+        instructions: {
+          en: "We did this in small groups in the first session. You can do it with a partner, or alone in writing. Take turns. One person answers, the other listens without advice or comments.\n\n• What am I mourning, and what am I celebrating?\n• What is my experience? What do I feel, and what do I need?\n• What is valuable, interesting and important to me?\n• What action could support me?\n\nThen listen to the other person with the same questions:\n\n• What are you mourning, and what are you celebrating?\n• What is your experience? What do you feel, and what do you need?\n• What is valuable, interesting and important to you?\n• What action could support you?",
+          no: "Dette gjorde vi i små grupper i første samling. Du kan gjøre det sammen med en partner, eller alene skriftlig. Bytt på. Én svarer, den andre lytter uten råd eller kommentarer.\n\n• Hva sørger jeg over, og hva feirer jeg?\n• Hva er min opplevelse? Hva føler jeg, og hva trenger jeg?\n• Hva er verdifullt, interessant og viktig for meg?\n• Hvilken handling kan støtte meg?\n\nLytt så til den andre med de samme spørsmålene:\n\n• Hva sørger du over, og hva feirer du?\n• Hva er din opplevelse? Hva føler du, og hva trenger du?\n• Hva er verdifullt, interessant og viktig for deg?\n• Hvilken handling kan støtte deg?",
+        },
+      },
+      {
+        id: "s1-thoughts-to-observations",
+        title: { en: "From the session: from judgments to observations", no: "Fra samlingen: fra vurderinger til observasjoner" },
+        instructions: {
+          en: "1. Choose a few people in your real life. Write down what you think about each of them, honestly, just as the thoughts come.\n\n2. Now think of a moment when you were with each person. Write what happened as observations, without judgment: what did they say or do, as a camera could record it?\n\nNotice how the two lists feel different.",
+          no: "1. Velg noen personer i livet ditt. Skriv ned hva du tenker om hver av dem, ærlig, akkurat slik tankene kommer.\n\n2. Tenk nå på et øyeblikk da du var sammen med hver person. Skriv hva som skjedde som observasjoner, uten vurdering: hva sa eller gjorde de, slik et kamera kunne tatt det opp?\n\nLegg merke til hvordan de to listene kjennes forskjellige.",
+        },
+      },
+      {
         id: "s1-observation-check",
         title: { en: "Observation or judgment?", no: "Observasjon eller vurdering?" },
         instructions: { en: "Write one sentence about something that happened. You'll get gentle feedback on whether it is a pure observation — what a camera could record — or whether a judgment slipped in.", no: "Skriv én setning om noe som skjedde. Du får vennlig tilbakemelding på om det er en ren observasjon – det et kamera kunne tatt opp – eller om en vurdering har sneket seg inn." },
