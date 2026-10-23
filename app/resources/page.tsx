@@ -95,7 +95,7 @@ export default function ResourcesPage() {
 
       <ol className="space-y-3">
         {sessions.map((session) => {
-          const hasContent = session.recordingUrl || session.resources.length > 0 || (session.bring?.length ?? 0) > 0;
+          const hasContent = (session.recordings?.length ?? 0) > 0 || session.resources.length > 0 || (session.bring?.length ?? 0) > 0;
           return (
             <li key={session.number} className="rounded-xl border border-border bg-card p-4">
               <h2 className="font-medium">
@@ -108,13 +108,18 @@ export default function ResourcesPage() {
               ) : (
                 <>
                 <ul className="mt-2 space-y-2 text-sm">
-                  {session.recordingUrl && (
-                    <li>
-                      <a href={session.recordingUrl} className="text-accent underline-offset-2 hover:underline">
-                        {copy.recording}
+                  {session.recordings?.map((video) => (
+                    <li key={video.youtubeId}>
+                      <a
+                        href={`https://youtu.be/${video.youtubeId}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent underline-offset-2 hover:underline"
+                      >
+                        {localize(video.title, language)}
                       </a>
                     </li>
-                  )}
+                  ))}
                   {session.bring?.map((item) => (
                     <ResourceItem key={item.id} resource={item} language={language} bring />
                   ))}

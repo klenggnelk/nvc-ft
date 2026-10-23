@@ -37,7 +37,7 @@ const copyByLanguage: Record<
     sessionOf: (n, total) => `Session ${n} of ${total}`,
     explore: "What we'll explore",
     recording: "Missed the session?",
-    recordingLink: "Watch the recording of the topics and exercise instructions",
+    recordingLink: "Watch the recordings of the topics and exercise instructions.",
     recordingSoon: "The recording of the topics and exercise instructions will appear here after the session.",
     bring: "Bring to this session",
     read: "Read and listen",
@@ -57,7 +57,7 @@ const copyByLanguage: Record<
     sessionOf: (n, total) => `Samling ${n} av ${total}`,
     explore: "Dette utforsker vi",
     recording: "Gikk du glipp av samlingen?",
-    recordingLink: "Se opptaket av temaene og øvelsesinstruksjonene",
+    recordingLink: "Se opptakene av temaene og øvelsesinstruksjonene.",
     recordingSoon: "Opptaket av temaene og øvelsesinstruksjonene kommer her etter samlingen.",
     bring: "Ta med til samlingen",
     read: "Les og lytt",
@@ -153,10 +153,28 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
 
       <section className="space-y-2 rounded-xl bg-accent-soft p-5">
         <h2 className="font-semibold">{copy.recording}</h2>
-        {session.recordingUrl ? (
-          <a href={session.recordingUrl} className="text-accent underline underline-offset-2">
-            {copy.recordingLink}
-          </a>
+        {session.recordings && session.recordings.length > 0 ? (
+          <>
+            <p className="text-sm text-muted">{copy.recordingLink}</p>
+            <div className="space-y-4 pt-1">
+              {session.recordings.map((video) => (
+                <figure key={video.youtubeId} className="space-y-1.5">
+                  <div className="aspect-video overflow-hidden rounded-lg border border-border bg-card">
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0`}
+                      title={localize(video.title, language)}
+                      loading="lazy"
+                      allow="encrypted-media; picture-in-picture; fullscreen"
+                      allowFullScreen
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      className="h-full w-full"
+                    />
+                  </div>
+                  <figcaption className="text-sm font-medium">{localize(video.title, language)}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </>
         ) : (
           <p className="text-sm text-muted">{copy.recordingSoon}</p>
         )}

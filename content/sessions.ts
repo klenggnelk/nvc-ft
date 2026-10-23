@@ -65,6 +65,13 @@ export type Exercise = {
   aiTask?: "observation-check";
 };
 
+/** One of our own recordings on YouTube, embedded on the session page. */
+export type Recording = {
+  /** The id in youtu.be/<id> */
+  youtubeId: string;
+  title: Localized;
+};
+
 export type Song = {
   title: string;
   /** Suno song id (from suno.com/song/<id>), used for the embedded player */
@@ -85,8 +92,8 @@ export type Session = {
   takeaways?: Localized;
   /** A song (made with Suno) that sums up the session's learnings */
   song?: Song;
-  /** Link to the recording of the topic presentations, added after the session */
-  recordingUrl?: string;
+  /** Recordings of the topic presentations (our own YouTube videos), added after the session */
+  recordings?: Recording[];
   /** Things participants should print or have ready before the session starts */
   bring?: Resource[];
   resources: Resource[];
@@ -134,6 +141,10 @@ export const sessions: Session[] = [
   {
     number: 1,
     title: { en: "Introduction to NVC", no: "Introduksjon til IVK" },
+    recordings: [
+      { youtubeId: "OCDJUNRQmTM", title: { en: "Recording, part 1", no: "Opptak, del 1" } },
+      { youtubeId: "rIp0KOUlBWw", title: { en: "Recording, part 2", no: "Opptak, del 2" } },
+    ],
     subtitle: { en: "Seeing clearly, speaking with connection", no: "Å se klart og snakke med kontakt" },
     description: { en: "We start by exploring how everyday language can either build bridges or create distance, often without our noticing. You'll practise telling apart what actually happened from the story we tell about it. That small shift can change a whole conversation. No experience needed, just bring your curiosity.", no: "Vi begynner med å utforske hvordan hverdagsspråket kan bygge broer eller skape avstand, ofte uten at vi merker det. Du får øve på å skille det som faktisk skjedde fra historien vi forteller om det. Den lille endringen kan forandre en hel samtale. Du trenger ingen erfaring, bare ta med nysgjerrigheten din." },
     topics: [
