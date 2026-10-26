@@ -9,6 +9,7 @@ const copyByLanguage: Record<
   Language,
   {
     title: string;
+    about: string;
     intro: string;
     sessionsTitle: string;
     session: string;
@@ -17,9 +18,11 @@ const copyByLanguage: Record<
   }
 > = {
   en: {
-    title: "NVC Foundation Training",
+    title: "Non-violent communication (NVC) Foundation Training",
+    about:
+      "Nonviolent Communication (NVC) is a way of speaking and listening that helps people connect, developed by Marshall Rosenberg. Instead of blaming or judging, we learn to notice what we observe, feel and need, and to ask clearly for what would help. We practise this with ourselves and with others. People use NVC in families, at work, in schools and in peace work all over the world.",
     intro:
-      "A companion for the ten sessions. Find what each session is about, watch a recording if you missed one, and practise between sessions.",
+      "The NVC Edu app supports you through the ten sessions of this course. Here you can see what each session is about, watch the recordings, find readings and songs, practise between sessions, and check your own learning, at your own pace.",
     sessionsTitle: "The ten sessions",
     session: "Session",
     areasTitle: "Across all sessions",
@@ -30,9 +33,11 @@ const copyByLanguage: Record<
     ],
   },
   no: {
-    title: "IVK grunnkurs",
+    title: "Grunnkurs i ikkevoldskommunikasjon (IVK)",
+    about:
+      "Ikkevoldskommunikasjon (IVK) er en måte å snakke og lytte på som hjelper mennesker å få kontakt, utviklet av Marshall Rosenberg. I stedet for å klandre eller dømme lærer vi å legge merke til hva vi observerer, føler og trenger, og å be tydelig om det som kan hjelpe. Vi øver på dette med oss selv og med andre. IVK brukes i familier, på arbeidsplasser, i skoler og i fredsarbeid over hele verden.",
     intro:
-      "En følgesvenn gjennom de ti samlingene. Se hva hver samling handler om, se opptaket hvis du gikk glipp av en, og øv mellom samlingene.",
+      "Appen NVC Edu støtter deg gjennom de ti samlingene i dette kurset. Her kan du se hva hver samling handler om, se opptakene, finne lesestoff og sanger, øve mellom samlingene og sjekke din egen læring, i ditt eget tempo.",
     sessionsTitle: "De ti samlingene",
     session: "Samling",
     areasTitle: "På tvers av samlingene",
@@ -52,6 +57,7 @@ export default function Home() {
     <div className="space-y-10">
       <section className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">{copy.title}</h1>
+        <p className="max-w-prose leading-relaxed">{copy.about}</p>
         <p className="max-w-prose text-muted">{copy.intro}</p>
         <p className="text-sm text-muted">{localize(course.schedule, language)}</p>
       </section>
