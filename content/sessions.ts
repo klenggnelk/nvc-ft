@@ -204,6 +204,10 @@ export const sessions: Session[] = [
   {
     number: 2,
     title: { en: "Feelings and Needs", no: "Følelser og behov" },
+    recordings: [
+      { youtubeId: "qB23dQZOpsA", title: { en: "Recording, part 1", no: "Opptak, del 1" } },
+      { youtubeId: "PRa97as_D34", title: { en: "Recording, part 2", no: "Opptak, del 2" } },
+    ],
     bring: [
       {
         id: "s2-picture-needs-cards",
@@ -260,6 +264,22 @@ export const sessions: Session[] = [
       },
     ],
     exercises: [
+      {
+        id: "s2-body-to-feeling",
+        title: { en: "From the session: from body to feeling", no: "Fra samlingen: fra kropp til følelse" },
+        instructions: {
+          en: "1. Think of a state of mind, or something that happened to you. Name what you noticed in your body: for example sweating, blushing, a tight throat, a warm chest or heavy shoulders.\n\n2. Now try to name the feeling that goes with each body reaction. For example, sweating and blushing could go with feeling awkward.\n\nThere is no right answer. The same body reaction can go with different feelings.",
+          no: "1. Tenk på en sinnstilstand, eller noe som skjedde med deg. Sett ord på hva du merket i kroppen: for eksempel svetting, rødming, en stram hals, varme i brystet eller tunge skuldre.\n\n2. Prøv nå å sette navn på følelsen som hører til hver kroppsreaksjon. For eksempel kan svetting og rødming høre sammen med å føle seg brydd.\n\nDet finnes ikke ett riktig svar. Den samme kroppsreaksjonen kan høre sammen med ulike følelser.",
+        },
+      },
+      {
+        id: "s2-thinking-feelings",
+        title: { en: "From the session: the feeling under the thought", no: "Fra samlingen: følelsen under tanken" },
+        instructions: {
+          en: "1. Write down a few \"thinking feelings\": words that sound like feelings but say what we think others are doing to us. For example: rejected, ignored, misunderstood, criticised.\n\n2. For each one, find the feelings underneath that you can sense in your body. For example, \"I feel rejected\" may hold sadness, loneliness and fear.\n\nThe Feelings vs. Faux Feelings list in the resources can help.",
+          no: "1. Skriv ned noen «tankefølelser»: ord som høres ut som følelser, men som sier hva vi tror andre gjør mot oss. For eksempel: avvist, oversett, misforstått, kritisert.\n\n2. Finn for hver av dem følelsene under, de du kan kjenne i kroppen. For eksempel kan «jeg føler meg avvist» romme tristhet, ensomhet og frykt.\n\nListen Følelser vs. falske følelser i ressursene kan hjelpe.",
+        },
+      },
       {
         id: "s2-feeling-or-thought",
         title: { en: "Feeling or thought?", no: "Følelse eller tanke?" },
