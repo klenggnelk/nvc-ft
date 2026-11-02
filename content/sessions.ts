@@ -72,6 +72,19 @@ export type Recording = {
   title: Localized;
 };
 
+/** A set of example replies to one situation, e.g. common non-empathy responses. */
+export type ResponseExamples = {
+  title: Localized;
+  intro: Localized;
+  /** What the other person says */
+  situation: Localized;
+  examples: { label: Localized; response: Localized }[];
+  /** An empathic reply to the same situation, shown last for contrast */
+  empathy: { label: Localized; response: Localized };
+  /** Closing note */
+  note?: Localized;
+};
+
 export type Song = {
   title: string;
   /** Suno song id (from suno.com/song/<id>), used for the embedded player */
@@ -92,6 +105,8 @@ export type Session = {
   takeaways?: Localized;
   /** A song (made with Suno) that sums up the session's learnings */
   song?: Song;
+  /** Example replies shown in a box on the session page */
+  responseExamples?: ResponseExamples;
   /** Recordings of the topic presentations (our own YouTube videos), added after the session */
   recordings?: Recording[];
   /** Things participants should print or have ready before the session starts */
@@ -315,6 +330,30 @@ export const sessions: Session[] = [
       book("s3-ch7", 7, "Receiving empathically", "Å ta imot med empati"),
       rosenbergEpisode("s3-podcast-dynamics-of-empathy", "Dynamics of Empathy", "5v9tSglQutTmSDv0vwk2d2"),
     ],
+    responseExamples: {
+      title: { en: "Non-empathy responses: examples", no: "Svar som ikke er empati: eksempler" },
+      intro: { en: "We often reply with good intentions, but many of our usual replies move the attention away from the other person. Here is the same situation with fifteen common replies that are not empathy.", no: "Vi svarer ofte med gode intensjoner, men mange av de vanlige svarene våre flytter oppmerksomheten bort fra den andre. Her er den samme situasjonen med femten vanlige svar som ikke er empati." },
+      situation: { en: "A friend says: “My boss criticised my presentation in front of the whole team today.”", no: "En venn sier: «Sjefen min kritiserte presentasjonen min foran hele teamet i dag.»" },
+      examples: [
+        { label: { en: "Storytelling", no: "Å fortelle egne historier" }, response: { en: "That reminds me of a meeting I had last year. Let me tell you what happened…", no: "Det minner meg om et møte jeg hadde i fjor. Nå skal du høre hva som skjedde…" } },
+        { label: { en: "Explaining", no: "Å forklare" }, response: { en: "She is probably under a lot of pressure from her own boss right now.", no: "Hun er nok under mye press fra sin egen sjef akkurat nå." } },
+        { label: { en: "Sympathising", no: "Å sympatisere" }, response: { en: "Oh, you poor thing. I feel so bad for you.", no: "Å, stakkars deg. Jeg synes så synd på deg." } },
+        { label: { en: "Educating", no: "Å belære" }, response: { en: "This can be a good learning experience. Criticism helps us grow.", no: "Dette kan bli en fin læringserfaring. Kritikk hjelper oss å vokse." } },
+        { label: { en: "Shutting down", no: "Å avslutte" }, response: { en: "Let's not dwell on it. Cheer up!", no: "La oss ikke dvele ved det. Opp med humøret!" } },
+        { label: { en: "Advising", no: "Å gi råd" }, response: { en: "I think you should talk to HR about it.", no: "Jeg synes du bør ta det opp med HR." } },
+        { label: { en: "Fixing", no: "Å fikse" }, response: { en: "Send me the slides. I'll make them better for you tonight.", no: "Send meg lysbildene. Jeg gjør dem bedre for deg i kveld." } },
+        { label: { en: "Evaluating", no: "Å vurdere" }, response: { en: "Your boss is really unprofessional.", no: "Sjefen din er virkelig uprofesjonell." } },
+        { label: { en: "One-upping", no: "Å overgå" }, response: { en: "That's nothing. My boss once shouted at me in front of a client.", no: "Det er ingenting. Sjefen min kjeftet en gang på meg foran en kunde." } },
+        { label: { en: "Commiserating", no: "Å klage sammen" }, response: { en: "Ugh, bosses are all the same. Mine is awful too.", no: "Æsj, sjefer er like alle sammen. Min er også helt forferdelig." } },
+        { label: { en: "Consoling", no: "Å trøste" }, response: { en: "It wasn't your fault. You did the best you could.", no: "Det var ikke din feil. Du gjorde så godt du kunne." } },
+        { label: { en: "Interrogating", no: "Å spørre ut" }, response: { en: "What exactly did she say? When? Who else was there?", no: "Hva sa hun egentlig? Når? Hvem andre var der?" } },
+        { label: { en: "Irony", no: "Ironi" }, response: { en: "Wow, sounds like a lovely place to work.", no: "Oi, det høres ut som en hyggelig arbeidsplass." } },
+        { label: { en: "Distracting", no: "Å distrahere" }, response: { en: "Let's forget about it. Did you see the match last night?", no: "Glem det. Så du kampen i går?" } },
+        { label: { en: "Correcting", no: "Å korrigere" }, response: { en: "I don't think she was criticising you. She was just giving feedback.", no: "Jeg tror ikke hun kritiserte deg. Hun ga deg bare tilbakemelding." } },
+      ],
+      empathy: { label: { en: "Empathy", no: "Empati" }, response: { en: "Are you feeling embarrassed and hurt, because you want respect and for your work to be valued?", no: "Føler du deg flau og såret, fordi du ønsker respekt og at arbeidet ditt blir verdsatt?" } },
+      note: { en: "These replies are not wrong, and some of them can help later. But first, most people want to be heard.", no: "Disse svarene er ikke feil, og noen av dem kan hjelpe senere. Men først vil de fleste bli hørt." },
+    },
     exercises: [
       {
         id: "s3-silent-empathy",

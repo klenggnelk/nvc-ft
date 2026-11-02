@@ -3,6 +3,7 @@
 import Link from "next/link";
 import CheckGame from "@/app/components/CheckGame";
 import ExerciseCard from "@/app/components/ExerciseCard";
+import ResponseExamplesBox from "@/app/components/ResponseExamplesBox";
 import SongPlayer from "@/app/components/SongPlayer";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { formatSessionDate, getCopy, localize, type Language } from "@/app/lib/language";
@@ -210,6 +211,8 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
           )}
         </section>
       )}
+
+      {session.responseExamples && <ResponseExamplesBox data={session.responseExamples} />}
 
       {session.song && <SongPlayer song={session.song} />}
 
