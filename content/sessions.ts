@@ -356,6 +356,22 @@ export const sessions: Session[] = [
     },
     exercises: [
       {
+        id: "s3-guessing-feelings-needs",
+        title: { en: "From the session: guessing feelings and needs", no: "Fra samlingen: å gjette følelser og behov" },
+        instructions: {
+          en: "Do this in a small group (three or four people). Take turns.\n\n1. One person shares a real-life experience that stirred something in them.\n\n2. The others guess the person's feelings: \"Are you feeling…?\"\n\n3. The person gives feedback on each guess (\"yes\", \"not quite\", \"more like…\"), so the group can arrive at the feelings that match how they want to be heard.\n\n4. In the same way, the group then guesses the needs behind those feelings: \"…because you need…?\"\n\nA guess that is not right still helps. The person's feedback is what leads the way.",
+          no: "Gjør dette i en liten gruppe (tre eller fire personer). Bytt på.\n\n1. Én person deler en virkelig opplevelse som satte i gang noe i henne eller ham.\n\n2. De andre gjetter personens følelser: «Føler du deg…?»\n\n3. Personen gir tilbakemelding på hver gjetning («ja», «ikke helt», «mer som…»), slik at gruppen kan komme fram til følelsene som stemmer med hvordan hun eller han vil bli hørt.\n\n4. På samme måte gjetter gruppen så behovene bak følelsene: «…fordi du trenger…?»\n\nEn gjetning som ikke treffer, hjelper likevel. Det er personens tilbakemelding som viser veien.",
+        },
+      },
+      {
+        id: "s3-complaint-three-ways",
+        title: { en: "From the session: one complaint, three replies", no: "Fra samlingen: én klage, tre svar" },
+        instructions: {
+          en: "Do this in pairs. Take turns.\n\n1. One person makes a complaint about something.\n\n2. The listener replies with one of the non-empathy responses from the list above, for example advising or one-upping.\n\n3. The complaint is said again. The listener replies with another non-empathy response.\n\n4. The complaint is said a third time. Now the listener listens with empathy: guess what the person is feeling and needing behind the complaint, and let them correct you until they feel heard the way they want to be heard.\n\nAfterwards, talk about it: how did each reply feel for the person who complained?",
+          no: "Gjør dette i par. Bytt på.\n\n1. Én person kommer med en klage på noe.\n\n2. Lytteren svarer med ett av svarene som ikke er empati fra listen over, for eksempel å gi råd eller å overgå.\n\n3. Klagen blir sagt igjen. Lytteren svarer med et annet svar som ikke er empati.\n\n4. Klagen blir sagt en tredje gang. Nå lytter lytteren med empati: gjett hva personen føler og trenger bak klagen, og la henne eller ham korrigere deg til hun eller han føler seg hørt slik hun eller han ønsker.\n\nSnakk sammen etterpå: hvordan kjentes hvert svar for den som klaget?",
+        },
+      },
+      {
         id: "s3-silent-empathy",
         title: { en: "Silent empathy", no: "Stille empati" },
         instructions: { en: "In one conversation this week, listen and guess silently: what might this person be feeling? What might they need? You don't need to say anything. Just notice how listening this way changes the conversation for you.", no: "I én samtale denne uken: lytt og gjett i stillhet. Hva kan denne personen føle? Hva kan hun eller han trenge? Du trenger ikke si noe. Bare legg merke til hvordan det å lytte på denne måten endrer samtalen for deg." },
