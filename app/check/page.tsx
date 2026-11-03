@@ -32,6 +32,24 @@ const copyByLanguage: Record<Language, { title: string; intro: string; how: stri
     how: "ہر راؤنڈ NVC دے اک اہم فرق بارے اے۔ اک جملہ پڑھو، چُنو کہ ایہہ کی اے، تے ویکھو کہ اسیں ایہنوں کداں ونڈاں گے تے کیوں۔",
     session: "سیشن",
   },
+  fr: {
+    title: "Faire le point",
+    intro: "De courts jeux pour remarquer ce que vous avez retenu — pour votre propre apprentissage, pas pour une note.",
+    how: "Chaque manche porte sur une distinction clé de la CNV. Lisez une phrase, choisissez ce que c'est, et voyez comment nous la classerions et pourquoi.",
+    session: "Séance",
+  },
+  ro: {
+    title: "Verifică-te",
+    intro: "Jocuri scurte ca să observi ce ți-ai însușit — pentru propria învățare, nu pentru o notă.",
+    how: "Fiecare rundă este despre o diferențiere cheie din CNV. Citește o afirmație, alege ce este și vezi cum am clasifica-o noi și de ce.",
+    session: "Sesiunea",
+  },
+  am: {
+    title: "ራስዎን ይፈትሹ",
+    intro: "የወሰዳችሁትን ለማስተዋል አጫጭር ጨዋታዎች — ለራሳችሁ ትምህርት እንጂ ለውጤት አይደለም።",
+    how: "እያንዳንዱ ዙር ስለ አንድ የNVC ቁልፍ ልዩነት ነው። አንድ ዓረፍተ ነገር አንብቡ፣ ምን እንደሆነ ምረጡ፣ እኛ እንዴትና ለምን እንደምንመድበው እዩ።",
+    session: "ክፍለ ጊዜ",
+  },
 };
 
 export default function CheckPage() {

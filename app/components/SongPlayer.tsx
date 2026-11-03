@@ -49,6 +49,36 @@ const copyByLanguage: Record<
     madeWith: "Suno نال بنایا",
     open: "Suno وچ کھولو",
   },
+  fr: {
+    heading: "Écouter : la séance en chanson",
+    intro: "Une chanson sur ce que l'on apprend dans cette séance, racontée à travers une situation de tous les jours. La chanson est en anglais.",
+    play: "Lecture",
+    pause: "Pause",
+    seek: "Position dans la chanson",
+    chorus: "Refrain",
+    madeWith: "Créée avec Suno",
+    open: "Ouvrir dans Suno",
+  },
+  ro: {
+    heading: "Ascultă: sesiunea într-un cântec",
+    intro: "Un cântec despre ce învățăm în această sesiune, spus printr-o situație de zi cu zi. Cântecul este în engleză.",
+    play: "Redă",
+    pause: "Pauză",
+    seek: "Poziția în cântec",
+    chorus: "Refren",
+    madeWith: "Creat cu Suno",
+    open: "Deschide în Suno",
+  },
+  am: {
+    heading: "አዳምጡ፦ ክፍለ ጊዜው በዘፈን",
+    intro: "በዚህ ክፍለ ጊዜ ስለምንማረው ነገር፣ በዕለት ተዕለት ሁኔታ የተነገረ ዘፈን። ዘፈኑ በእንግሊዝኛ ነው።",
+    play: "አጫውት",
+    pause: "ለአፍታ አቁም",
+    seek: "በዘፈኑ ውስጥ ያለ ቦታ",
+    chorus: "አዝማች",
+    madeWith: "በSuno የተሠራ",
+    open: "በSuno ክፈት",
+  },
 };
 
 function formatTime(seconds: number): string {

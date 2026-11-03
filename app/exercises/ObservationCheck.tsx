@@ -41,6 +41,30 @@ const copyByLanguage: Record<
     mixed: "کجھ جانچ رَل گئی اے",
     suggestion: "صرف مشاہدے والی شکل",
   },
+  fr: {
+    placeholder: "ex. Tu es toujours en retard à nos réunions.",
+    submit: "Recevoir un retour",
+    working: "Réflexion…",
+    observation: "C'est une observation",
+    mixed: "Un peu d'évaluation s'est glissée",
+    suggestion: "Version observation seule",
+  },
+  ro: {
+    placeholder: "de ex. Întârzii mereu la ședințele noastre.",
+    submit: "Primește feedback",
+    working: "Se gândește…",
+    observation: "Aceasta este o observație",
+    mixed: "S-a strecurat puțină evaluare",
+    suggestion: "Variantă doar cu observație",
+  },
+  am: {
+    placeholder: "ለምሳሌ፦ ሁልጊዜ ለስብሰባዎቻችን ታረፍዳለህ።",
+    submit: "አስተያየት ያግኙ",
+    working: "እያሰበ ነው…",
+    observation: "ይህ ምልከታ ነው",
+    mixed: "ትንሽ ግምገማ ገብቷል",
+    suggestion: "ምልከታ ብቻ የሆነ ቅጂ",
+  },
 };
 
 export default function ObservationCheck() {

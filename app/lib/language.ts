@@ -3,7 +3,7 @@
 
 import { contentTranslations } from "@/content/i18n";
 
-export const SUPPORTED_LANGUAGES = ["en", "no", "sw", "pa"] as const;
+export const SUPPORTED_LANGUAGES = ["en", "no", "fr", "ro", "sw", "am", "pa"] as const;
 export type Language = (typeof SUPPORTED_LANGUAGES)[number];
 
 export const DEFAULT_LANGUAGE: Language = "en";
@@ -11,7 +11,10 @@ export const DEFAULT_LANGUAGE: Language = "en";
 export const LANGUAGE_LABELS: Record<Language, string> = {
   en: "English",
   no: "Norsk",
+  fr: "Français",
+  ro: "Română",
   sw: "Kiswahili",
+  am: "አማርኛ",
   pa: "پنجابی",
 };
 
@@ -19,7 +22,10 @@ export const LANGUAGE_LABELS: Record<Language, string> = {
 export const LANGUAGE_DIR: Record<Language, "ltr" | "rtl"> = {
   en: "ltr",
   no: "ltr",
+  fr: "ltr",
+  ro: "ltr",
   sw: "ltr",
+  am: "ltr",
   pa: "rtl",
 };
 
@@ -27,14 +33,20 @@ export const LANGUAGE_DIR: Record<Language, "ltr" | "rtl"> = {
 export const HTML_LANG: Record<Language, string> = {
   en: "en",
   no: "nb",
+  fr: "fr",
+  ro: "ro",
   sw: "sw",
+  am: "am",
   pa: "pa-Arab",
 };
 
 const DATE_LOCALE: Record<Language, string> = {
   en: "en-GB",
   no: "nb-NO",
+  fr: "fr-FR",
+  ro: "ro-RO",
   sw: "sw-KE",
+  am: "am-ET",
   pa: "pa-Arab-PK",
 };
 

@@ -27,6 +27,21 @@ const copyByLanguage: Record<Language, { title: string; intro: string; session: 
     intro: "سیشناں دے وچکار اپنی رفتار نال مشق کرو۔ ایتھے کوئی جواب غلط نئیں — بس مشق اے۔",
     session: "سیشن",
   },
+  fr: {
+    title: "Exercices",
+    intro: "Pratiquez entre les séances à votre rythme. Il n'y a pas de mauvaise réponse ici — seulement de la pratique.",
+    session: "Séance",
+  },
+  ro: {
+    title: "Exerciții",
+    intro: "Exersează între sesiuni, în ritmul tău. Aici nu există răspunsuri greșite — doar exersare.",
+    session: "Sesiunea",
+  },
+  am: {
+    title: "ልምምዶች",
+    intro: "በክፍለ ጊዜዎች መካከል በራሳችሁ ፍጥነት ተለማመዱ። እዚህ የተሳሳተ መልስ የለም — ልምምድ ብቻ ነው።",
+    session: "ክፍለ ጊዜ",
+  },
 };
 
 export default function ExercisesPage() {

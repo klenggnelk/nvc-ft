@@ -14,6 +14,9 @@ const copyByLanguage: Record<
   no: { brand: "NVC Edu", home: "Hjem", resources: "Ressurser", exercises: "Øvelser", check: "Sjekk deg selv", language: "Språk" },
   sw: { brand: "NVC Edu", home: "Mwanzo", resources: "Rasilimali", exercises: "Mazoezi", check: "Jipime", language: "Lugha" },
   pa: { brand: "NVC Edu", home: "مُکھ صفحہ", resources: "وسیلے", exercises: "مشقاں", check: "اپنے آپ نوں جانچو", language: "بولی" },
+  fr: { brand: "NVC Edu", home: "Accueil", resources: "Ressources", exercises: "Exercices", check: "Faire le point", language: "Langue" },
+  ro: { brand: "NVC Edu", home: "Acasă", resources: "Resurse", exercises: "Exerciții", check: "Verifică-te", language: "Limbă" },
+  am: { brand: "NVC Edu", home: "መነሻ", resources: "ሀብቶች", exercises: "ልምምዶች", check: "ራስዎን ይፈትሹ", language: "ቋንቋ" },
 };
 
 export default function SiteHeader() {

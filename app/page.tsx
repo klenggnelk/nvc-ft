@@ -77,6 +77,51 @@ const copyByLanguage: Record<
       { href: "/check", title: "اپنے آپ نوں جانچو", text: "چھوٹیاں جانچاں تاں جو پتہ لگے تسیں کی سکھیا اے۔" },
     ],
   },
+  fr: {
+    title: "Formation de base à la Communication NonViolente (CNV)",
+    about:
+      "La Communication NonViolente (CNV, en anglais NVC) est une façon de parler et d'écouter qui aide les gens à se relier, développée par Marshall Rosenberg. Au lieu de blâmer ou de juger, nous apprenons à remarquer ce que nous observons, ressentons et ce dont nous avons besoin, et à demander clairement ce qui aiderait. Nous pratiquons cela avec nous-mêmes et avec les autres. La CNV est utilisée dans les familles, au travail, dans les écoles et dans le travail pour la paix partout dans le monde.",
+    intro:
+      "L'application NVC Edu vous accompagne pendant les dix séances de cette formation. Vous pouvez y voir le contenu de chaque séance, regarder les enregistrements, trouver des lectures et des chansons, pratiquer entre les séances et faire le point sur votre apprentissage, à votre rythme.",
+    sessionsTitle: "Les dix séances",
+    session: "Séance",
+    areasTitle: "Pour toutes les séances",
+    cards: [
+      { href: "/resources", title: "Ressources", text: "Lectures et enregistrements de chaque séance, au même endroit." },
+      { href: "/exercises", title: "Exercices", text: "Tous les exercices, certains avec un retour bienveillant de l'IA." },
+      { href: "/check", title: "Faire le point", text: "De courts autotests pour remarquer ce que vous avez intégré." },
+    ],
+  },
+  ro: {
+    title: "Formare de bază în Comunicare Nonviolentă (CNV)",
+    about:
+      "Comunicarea Nonviolentă (CNV, în engleză NVC) este un mod de a vorbi și de a asculta care îi ajută pe oameni să se conecteze, dezvoltat de Marshall Rosenberg. În loc să învinovățim sau să judecăm, învățăm să observăm ce vedem, ce simțim și de ce avem nevoie, și să cerem clar ce ne-ar ajuta. Exersăm asta cu noi înșine și cu ceilalți. Oamenii folosesc CNV în familii, la muncă, în școli și în munca pentru pace din toată lumea.",
+    intro:
+      "Aplicația NVC Edu te însoțește prin cele zece sesiuni ale acestui curs. Aici poți vedea despre ce este fiecare sesiune, poți urmări înregistrările, poți găsi lecturi și cântece, poți exersa între sesiuni și îți poți verifica propria învățare, în ritmul tău.",
+    sessionsTitle: "Cele zece sesiuni",
+    session: "Sesiunea",
+    areasTitle: "Pentru toate sesiunile",
+    cards: [
+      { href: "/resources", title: "Resurse", text: "Lecturi și înregistrări pentru fiecare sesiune, într-un singur loc." },
+      { href: "/exercises", title: "Exerciții", text: "Toate exercițiile, unele cu feedback blând de la AI." },
+      { href: "/check", title: "Verifică-te", text: "Scurte autoverificări ca să observi ce ți-ai însușit." },
+    ],
+  },
+  am: {
+    title: "የዓመፅ አልባ ግንኙነት (NVC) መሠረታዊ ሥልጠና",
+    about:
+      "ዓመፅ አልባ ግንኙነት (Nonviolent Communication፣ NVC) ሰዎች እንዲገናኙ የሚረዳ የመናገርና የማዳመጥ መንገድ ሲሆን በማርሻል ሮዘንበርግ የተዘጋጀ ነው። ከመውቀስ ወይም ከመፍረድ ይልቅ የምናየውን፣ የሚሰማንንና የሚያስፈልገንን ማስተዋልን፣ እና የሚረዳውን በግልጽ መጠየቅን እንማራለን። ይህንን ከራሳችንና ከሌሎች ጋር እንለማመዳለን። ሰዎች NVCን በቤተሰብ፣ በሥራ ቦታ፣ በትምህርት ቤቶችና በሰላም ሥራ በዓለም ዙሪያ ይጠቀሙበታል።",
+    intro:
+      "የNVC Edu መተግበሪያ በዚህ ኮርስ አሥሩ ክፍለ ጊዜዎች ውስጥ ይደግፋችኋል። እዚህ እያንዳንዱ ክፍለ ጊዜ ስለ ምን እንደሆነ ማየት፣ ቅጂዎቹን መመልከት፣ ንባቦችንና ዘፈኖችን ማግኘት፣ በክፍለ ጊዜዎች መካከል መለማመድ፣ እና የራሳችሁን ትምህርት በራሳችሁ ፍጥነት መፈተሽ ትችላላችሁ።",
+    sessionsTitle: "አሥሩ ክፍለ ጊዜዎች",
+    session: "ክፍለ ጊዜ",
+    areasTitle: "ለሁሉም ክፍለ ጊዜዎች",
+    cards: [
+      { href: "/resources", title: "ሀብቶች", text: "ለእያንዳንዱ ክፍለ ጊዜ ንባቦችና ቅጂዎች በአንድ ቦታ።" },
+      { href: "/exercises", title: "ልምምዶች", text: "ሁሉም ልምምዶች፣ አንዳንዶቹ ከAI ለስላሳ አስተያየት ጋር።" },
+      { href: "/check", title: "ራስዎን ይፈትሹ", text: "የተማራችሁትን ለማስተዋል አጫጭር የራስ ፈተናዎች።" },
+    ],
+  },
 };
 
 export default function Home() {
