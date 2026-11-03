@@ -73,6 +73,46 @@ const copyByLanguage: Record<
     previous: "Forrige samling",
     next: "Neste samling",
   },
+  sw: {
+    back: "Vikao vyote",
+    sessionOf: (n, total) => `Kikao ${n} kati ya ${total}`,
+    explore: "Tutakachochunguza",
+    recording: "Ulikosa kikao?",
+    recordingLink: "Tazama rekodi za mada na maelekezo ya mazoezi.",
+    recordingSoon: "Rekodi ya mada na maelekezo ya mazoezi itaonekana hapa baada ya kikao.",
+    bring: "Leta kwenye kikao hiki",
+    read: "Soma na usikilize",
+    podcast: "Podikasti",
+    takeaways: "Mafunzo makuu",
+    check: "Jipime",
+    checkIntro: "Mchezo mfupi wa baada ya kikao. Soma kila sentensi na uchague ni ipi. Ni kwa ajili ya ujifunzaji wako, si alama.",
+    practise: "Jizoeze wiki hii",
+    practiseIntro: "Mazoezi madogo kwa siku kati ya vikao. Hakuna majibu yasiyo sahihi — ni mazoezi tu.",
+    flow: "Jinsi kila kikao kinavyoendeshwa",
+    min: "dak",
+    previous: "Kikao kilichopita",
+    next: "Kikao kijacho",
+  },
+  pa: {
+    back: "سارے سیشن",
+    sessionOf: (n, total) => `سیشن ${n} (${total} وچوں)`,
+    explore: "اسیں کی ویکھاں گے",
+    recording: "سیشن رہ گیا؟",
+    recordingLink: "موضوعاں تے مشقاں دیاں ہدایتاں دیاں ریکارڈنگاں ویکھو۔",
+    recordingSoon: "موضوعاں تے مشقاں دیاں ہدایتاں دی ریکارڈنگ سیشن توں بعد ایتھے آ جاوے گی۔",
+    bring: "ایس سیشن وچ نال لیاؤ",
+    read: "پڑھو تے سنو",
+    podcast: "پوڈکاسٹ",
+    takeaways: "اہم سبق",
+    check: "اپنے آپ نوں جانچو",
+    checkIntro: "سیشن توں بعد لئی اک چھوٹی کھیڈ۔ ہر جملہ پڑھو تے چُنو کہ ایہہ کی اے۔ ایہہ تہاڈی اپنی سکھلائی لئی اے، نمبراں لئی نئیں۔",
+    practise: "ایس ہفتے مشق کرو",
+    practiseIntro: "سیشناں دے وچکار دے دناں لئی چھوٹیاں مشقاں۔ کوئی جواب غلط نئیں — بس مشق اے۔",
+    flow: "ہر سیشن کداں چلدا اے",
+    min: "منٹ",
+    previous: "پچھلا سیشن",
+    next: "اگلا سیشن",
+  },
 };
 
 export default function SessionView({ sessionNumber }: { sessionNumber: number }) {
@@ -89,7 +129,7 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
   return (
     <div className="space-y-8">
       <Link href="/" className="text-sm text-muted hover:text-foreground">
-        ← {copy.back}
+        <span aria-hidden className="inline-block rtl:-scale-x-100">←</span> {copy.back}
       </Link>
 
       <header className="space-y-2">
@@ -145,7 +185,7 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
 
       <section className="space-y-2">
         <h2 className="text-lg font-semibold">{copy.explore}</h2>
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 ps-5">
           {session.topics.map((topic) => (
             <li key={topic.en}>{localize(topic, language)}</li>
           ))}
@@ -187,7 +227,7 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
           <ul className="space-y-1">
             {session.resources.map((resource) => (
               <li key={resource.id}>
-                {resource.kind === "podcast" && <span className="mr-2 rounded-full bg-accent-soft px-2 py-0.5 text-xs text-accent">{copy.podcast}</span>}
+                {resource.kind === "podcast" && <span className="me-2 rounded-full bg-accent-soft px-2 py-0.5 text-xs text-accent">{copy.podcast}</span>}
                 {resource.url ? (
                   <a
                     href={resource.url}
@@ -243,14 +283,14 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
       <nav className="flex justify-between gap-4 border-t border-border pt-4 text-sm">
         {previous ? (
           <Link href={`/sessions/${previous.number}`} className="text-muted hover:text-foreground">
-            ← {copy.previous}
+            <span aria-hidden className="inline-block rtl:-scale-x-100">←</span> {copy.previous}
           </Link>
         ) : (
           <span />
         )}
         {next && (
-          <Link href={`/sessions/${next.number}`} className="text-right text-muted hover:text-foreground">
-            {copy.next} →
+          <Link href={`/sessions/${next.number}`} className="text-end text-muted hover:text-foreground">
+            {copy.next} <span aria-hidden className="inline-block rtl:-scale-x-100">→</span>
           </Link>
         )}
       </nav>

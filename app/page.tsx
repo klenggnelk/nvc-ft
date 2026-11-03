@@ -47,6 +47,36 @@ const copyByLanguage: Record<
       { href: "/check", title: "Sjekk deg selv", text: "Korte selvsjekker for å merke hva du har tatt inn." },
     ],
   },
+  sw: {
+    title: "Mafunzo ya msingi ya Mawasiliano Yasiyo ya Vurugu (NVC)",
+    about:
+      "Mawasiliano Yasiyo ya Vurugu (Nonviolent Communication, NVC) ni njia ya kuzungumza na kusikiliza inayowasaidia watu kuungana, iliyoanzishwa na Marshall Rosenberg. Badala ya kulaumu au kuhukumu, tunajifunza kutambua tunachokiona, tunachohisi na tunachohitaji, na kuomba waziwazi kile kinachoweza kusaidia. Tunajizoeza hili na nafsi zetu na wengine. Watu hutumia NVC katika familia, kazini, shuleni na katika kazi za amani duniani kote.",
+    intro:
+      "Programu ya NVC Edu inakusaidia katika vikao kumi vya kozi hii. Hapa unaweza kuona kila kikao kinahusu nini, kutazama rekodi, kupata masomo na nyimbo, kujizoeza kati ya vikao, na kupima ujifunzaji wako mwenyewe, kwa kasi yako.",
+    sessionsTitle: "Vikao kumi",
+    session: "Kikao",
+    areasTitle: "Katika vikao vyote",
+    cards: [
+      { href: "/resources", title: "Rasilimali", text: "Masomo na rekodi za kila kikao mahali pamoja." },
+      { href: "/exercises", title: "Mazoezi", text: "Mazoezi yote, baadhi yakiwa na maoni ya upole ya AI." },
+      { href: "/check", title: "Jipime", text: "Majaribio mafupi ya kujipima ili kutambua ulichojifunza." },
+    ],
+  },
+  pa: {
+    title: "بغیر تشدد گل بات (NVC) دی بنیادی تربیت",
+    about:
+      "بغیر تشدد گل بات (Nonviolent Communication، NVC) بولن تے سنن دا اک طریقہ اے جو لوکاں نوں اک دوجے نال جوڑن وچ مدد کردا اے، تے ایہنوں مارشل روزنبرگ نے بنایا۔ الزام دین یا فیصلہ سنان دی تھاں، اسیں ایہہ پچھاننا سکھدے آں کہ اسیں کی ویکھدے آں، کی محسوس کردے آں تے سانوں کی لوڑ اے، تے صاف لفظاں وچ اوہ منگنا جو مدد کرے۔ اسیں ایہدی مشق اپنے آپ نال تے دوجیاں نال کردے آں۔ لوک NVC نوں ٹبراں وچ، کم تے، سکولاں وچ تے امن دے کم وچ پوری دنیا وچ ورتدے نیں۔",
+    intro:
+      "NVC Edu ایپ ایس کورس دے دس سیشناں وچ تہاڈا ساتھ دیندی اے۔ ایتھے تسیں ویکھ سکدے او کہ ہر سیشن کس بارے اے، ریکارڈنگاں ویکھ سکدے او، پڑھن دا مواد تے گیت لبھ سکدے او، سیشناں دے وچکار مشق کر سکدے او، تے اپنی سکھلائی آپ جانچ سکدے او، اپنی رفتار نال۔",
+    sessionsTitle: "دس سیشن",
+    session: "سیشن",
+    areasTitle: "سارے سیشناں لئی",
+    cards: [
+      { href: "/resources", title: "وسیلے", text: "ہر سیشن لئی پڑھن دا مواد تے ریکارڈنگاں اک تھاں تے۔" },
+      { href: "/exercises", title: "مشقاں", text: "ساریاں مشقاں، کجھ نال AI دی نرم رائے۔" },
+      { href: "/check", title: "اپنے آپ نوں جانچو", text: "چھوٹیاں جانچاں تاں جو پتہ لگے تسیں کی سکھیا اے۔" },
+    ],
+  },
 };
 
 export default function Home() {

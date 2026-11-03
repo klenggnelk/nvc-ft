@@ -59,6 +59,40 @@ const copyByLanguage: Record<
     again: "Spill igjen",
     note: "Dette er øving, ikke en karakter. Ser du noe annerledes, ta det med til samlingen. Det blir en god samtale.",
   },
+  sw: {
+    keyLabel: (n) => `Tofauti muhimu ${n}`,
+    start: (n) => `Anza (sentensi ${n})`,
+    question: "Ni ipi?",
+    progress: (i, total) => `${i} kati ya ${total}`,
+    same: "Ndiyo, tunaona kwa njia moja.",
+    different: "Hii tunaiona tofauti.",
+    thisIs: "Sisi tungeiita hii:",
+    next: "Endelea",
+    finish: "Ona muhtasari",
+    doneTitle: "Raundi imekamilika",
+    result: (same, total) => `Uliona ${same} kati ya ${total} kwa njia moja nasi.`,
+    allSame: "Uliona kila sentensi kwa njia moja nasi.",
+    lookAgain: "Inafaa kuangalia tena:",
+    again: "Cheza tena",
+    note: "Haya ni mazoezi, si alama. Ukiona moja tofauti, ilete kwenye kikao. Inaleta mazungumzo mazuri.",
+  },
+  pa: {
+    keyLabel: (n) => `اہم فرق ${n}`,
+    start: (n) => `شروع کرو (${n} جملے)`,
+    question: "ایہہ کی اے؟",
+    progress: (i, total) => `${total} وچوں ${i}`,
+    same: "ہاں، اسیں ایہنوں اکو جیہا ویکھدے آں۔",
+    different: "ایہنوں اسیں وکھرا ویکھدے آں۔",
+    thisIs: "اسیں ایہنوں آکھاں گے:",
+    next: "اگلا",
+    finish: "خلاصہ ویکھو",
+    doneTitle: "راؤنڈ مکمل",
+    result: (same, total) => `تسیں ${total} وچوں ${same} نوں ساڈے وانگ ویکھیا۔`,
+    allSame: "تسیں ہر جملے نوں ساڈے وانگ ویکھیا۔",
+    lookAgain: "اک واری ہور ویکھن جوگے:",
+    again: "فیر کھیڈو",
+    note: "ایہہ مشق اے، نمبر نئیں۔ جے تسیں کسے نوں وکھرا ویکھدے او، تاں اوہنوں سیشن وچ لے آؤ۔ ایہدے نال چنگی گل بات ہوندی اے۔",
+  },
 };
 
 /** Returns the numbers 0..n-1 in random order. Only called from click handlers (never during render). */
@@ -209,7 +243,7 @@ export default function CheckGame({ check }: { check: Check }) {
                 {different.map((index) => {
                   const item = check.statements[index];
                   return (
-                    <li key={index} className="space-y-1 border-l-2 border-border pl-3">
+                    <li key={index} className="space-y-1 border-s-2 border-border ps-3">
                       <p>{localize(item.text, language)}</p>
                       <p className="text-muted">
                         <span className="font-medium text-foreground">{localize(check.labels[item.answer], language)}.</span>{" "}

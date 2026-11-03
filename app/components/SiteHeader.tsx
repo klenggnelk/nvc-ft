@@ -12,6 +12,8 @@ const copyByLanguage: Record<
 > = {
   en: { brand: "NVC Edu", home: "Home", resources: "Resources", exercises: "Exercises", check: "Check yourself", language: "Language" },
   no: { brand: "NVC Edu", home: "Hjem", resources: "Ressurser", exercises: "Øvelser", check: "Sjekk deg selv", language: "Språk" },
+  sw: { brand: "NVC Edu", home: "Mwanzo", resources: "Rasilimali", exercises: "Mazoezi", check: "Jipime", language: "Lugha" },
+  pa: { brand: "NVC Edu", home: "مُکھ صفحہ", resources: "وسیلے", exercises: "مشقاں", check: "اپنے آپ نوں جانچو", language: "بولی" },
 };
 
 export default function SiteHeader() {
@@ -49,7 +51,7 @@ export default function SiteHeader() {
             </select>
           </label>
         </div>
-        <nav className="-ml-3 flex flex-wrap gap-1 text-sm">
+        <nav className="-ms-3 flex flex-wrap gap-1 text-sm">
           {links.map((link) => {
             const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
             return (

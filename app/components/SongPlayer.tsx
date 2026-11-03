@@ -29,6 +29,26 @@ const copyByLanguage: Record<
     madeWith: "Laget med Suno",
     open: "Åpne i Suno",
   },
+  sw: {
+    heading: "Sikiliza: kikao katika wimbo",
+    intro: "Wimbo kuhusu mafunzo ya kikao hiki, unaosimuliwa kupitia hali ya kila siku. Wimbo ni kwa Kiingereza.",
+    play: "Cheza",
+    pause: "Simamisha",
+    seek: "Mahali katika wimbo",
+    chorus: "Kiitikio",
+    madeWith: "Umetengenezwa kwa Suno",
+    open: "Fungua katika Suno",
+  },
+  pa: {
+    heading: "سنو: سیشن اک گیت وچ",
+    intro: "ایس سیشن دیاں سکھیاں گلاں بارے اک گیت، روزمرہ دی اک حالت راہیں۔ گیت انگریزی وچ اے۔",
+    play: "چلاؤ",
+    pause: "روکو",
+    seek: "گیت وچ تھاں",
+    chorus: "ٹیپ",
+    madeWith: "Suno نال بنایا",
+    open: "Suno وچ کھولو",
+  },
 };
 
 function formatTime(seconds: number): string {

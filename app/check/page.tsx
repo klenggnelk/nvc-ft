@@ -20,6 +20,18 @@ const copyByLanguage: Record<Language, { title: string; intro: string; how: stri
     how: "Hver runde handler om én nøkkeldifferensiering i IVK. Les et utsagn, velg hva det er, og se hvordan vi ville sortert det og hvorfor.",
     session: "Samling",
   },
+  sw: {
+    title: "Jipime",
+    intro: "Michezo mifupi ya kutambua ulichojifunza — kwa ajili ya ujifunzaji wako, si alama.",
+    how: "Kila raundi inahusu tofauti moja muhimu ya NVC. Soma sentensi, chagua ni ipi, na uone jinsi sisi tungeipanga na kwa nini.",
+    session: "Kikao",
+  },
+  pa: {
+    title: "اپنے آپ نوں جانچو",
+    intro: "چھوٹیاں کھیڈاں تاں جو پتہ لگے تسیں کی سکھیا اے — تہاڈی اپنی سکھلائی لئی، نمبراں لئی نئیں۔",
+    how: "ہر راؤنڈ NVC دے اک اہم فرق بارے اے۔ اک جملہ پڑھو، چُنو کہ ایہہ کی اے، تے ویکھو کہ اسیں ایہنوں کداں ونڈاں گے تے کیوں۔",
+    session: "سیشن",
+  },
 };
 
 export default function CheckPage() {

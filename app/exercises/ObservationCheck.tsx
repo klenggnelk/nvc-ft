@@ -25,6 +25,22 @@ const copyByLanguage: Record<
     mixed: "Litt vurdering snek seg inn",
     suggestion: "Ren observasjon",
   },
+  sw: {
+    placeholder: "mfano: Wewe huchelewa kila mara kwenye mikutano yetu.",
+    submit: "Pata maoni",
+    working: "Inafikiri…",
+    observation: "Huo ni uchunguzi",
+    mixed: "Tathmini kidogo imeingia",
+    suggestion: "Toleo la uchunguzi tu",
+  },
+  pa: {
+    placeholder: "مثال: تسیں ساڈیاں میٹنگاں وچ ہمیشہ دیر نال آؤندے او۔",
+    submit: "رائے لوو",
+    working: "سوچ رہیا اے…",
+    observation: "ایہہ مشاہدہ اے",
+    mixed: "کجھ جانچ رَل گئی اے",
+    suggestion: "صرف مشاہدے والی شکل",
+  },
 };
 
 export default function ObservationCheck() {

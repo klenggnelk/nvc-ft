@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import { DEFAULT_LANGUAGE, normalizeLanguage, type Language } from "@/app/lib/language";
+import { DEFAULT_LANGUAGE, HTML_LANG, LANGUAGE_DIR, normalizeLanguage, type Language } from "@/app/lib/language";
 
 const STORAGE_KEY = "nvc-ft.language";
 
@@ -29,7 +29,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = language === "no" ? "nb" : language;
+    document.documentElement.lang = HTML_LANG[language];
+    document.documentElement.dir = LANGUAGE_DIR[language];
   }, [language]);
 
   function setLanguage(next: Language) {

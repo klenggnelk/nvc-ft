@@ -41,6 +41,28 @@ const copyByLanguage: Record<
     bring: "Ta med",
     takeaways: "Viktige poeng",
   },
+  sw: {
+    title: "Rasilimali",
+    intro: "Masomo, podikasti na rekodi za kila kikao. Rekodi zinaongezwa baada ya kila kikao.",
+    general: "Kwa mafunzo yote",
+    session: "Kikao",
+    recording: "Rekodi ya mada na maelekezo ya mazoezi",
+    empty: "Bado hakuna kitu hapa.",
+    podcast: "Podikasti",
+    bring: "Leta kwenye kikao",
+    takeaways: "Mafunzo makuu",
+  },
+  pa: {
+    title: "وسیلے",
+    intro: "ہر سیشن لئی پڑھن دا مواد، پوڈکاسٹ تے ریکارڈنگاں۔ ریکارڈنگاں ہر سیشن توں بعد پائیاں جاندیاں نیں۔",
+    general: "پوری تربیت لئی",
+    session: "سیشن",
+    recording: "موضوعاں تے مشقاں دیاں ہدایتاں دی ریکارڈنگ",
+    empty: "ایتھے اجے کجھ نئیں۔",
+    podcast: "پوڈکاسٹ",
+    bring: "سیشن وچ نال لیاؤ",
+    takeaways: "اہم سبق",
+  },
 };
 
 function ResourceItem({ resource, language, bring = false }: { resource: Resource; language: Language; bring?: boolean }) {
@@ -50,10 +72,10 @@ function ResourceItem({ resource, language, bring = false }: { resource: Resourc
   return (
     <li>
       {bring && (
-        <span className="mr-2 rounded-full border border-accent px-2 py-0.5 text-xs font-medium text-accent">{copy.bring}</span>
+        <span className="me-2 rounded-full border border-accent px-2 py-0.5 text-xs font-medium text-accent">{copy.bring}</span>
       )}
       {resource.kind === "podcast" && (
-        <span className="mr-2 rounded-full bg-accent-soft px-2 py-0.5 text-xs text-accent">{copy.podcast}</span>
+        <span className="me-2 rounded-full bg-accent-soft px-2 py-0.5 text-xs text-accent">{copy.podcast}</span>
       )}
       {resource.url ? (
         <a

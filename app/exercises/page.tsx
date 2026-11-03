@@ -17,6 +17,16 @@ const copyByLanguage: Record<Language, { title: string; intro: string; session: 
     intro: "Øv mellom samlingene i ditt eget tempo. Her finnes ingen feil svar — bare øving.",
     session: "Samling",
   },
+  sw: {
+    title: "Mazoezi",
+    intro: "Jizoeze kati ya vikao kwa kasi yako mwenyewe. Hakuna majibu yasiyo sahihi hapa — ni mazoezi tu.",
+    session: "Kikao",
+  },
+  pa: {
+    title: "مشقاں",
+    intro: "سیشناں دے وچکار اپنی رفتار نال مشق کرو۔ ایتھے کوئی جواب غلط نئیں — بس مشق اے۔",
+    session: "سیشن",
+  },
 };
 
 export default function ExercisesPage() {
