@@ -310,6 +310,10 @@ export const sessions: Session[] = [
   {
     number: 3,
     title: { en: "Empathic Listening", no: "Empatisk lytting" },
+    recordings: [
+      { youtubeId: "cSdKknkUU0s", title: { en: "Recording, part 1", no: "Opptak, del 1" } },
+      { youtubeId: "psCOmRzsvac", title: { en: "Recording, part 2", no: "Opptak, del 2" } },
+    ],
     subtitle: { en: "Hearing the heart behind the words", no: "Å høre hjertet bak ordene" },
     description: { en: "What happens when someone feels truly heard? In this session we practise listening for the feelings and needs behind complaints, stories and experiences, including the needs that are met and the needs that aren't. You'll discover how much can shift when people feel understood rather than judged or fixed.", no: "Hva skjer når noen føler seg virkelig hørt? I denne samlingen øver vi på å lytte etter følelsene og behovene bak klager, historier og opplevelser, både behov som er møtt og behov som ikke er det. Du vil oppdage hvor mye som kan endre seg når folk føler seg forstått i stedet for vurdert eller fikset." },
     topics: [{ en: "Building your empathy muscle", no: "Å trene empatimuskelen" }, { en: "Staying curious", no: "Å forbli nysgjerrig" }],
