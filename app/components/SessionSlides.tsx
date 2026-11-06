@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { getCopy, localize, type Language, type Localized } from "@/app/lib/language";
 import type { Slide, SlideIcon } from "@/content/slides";
@@ -289,6 +289,9 @@ export default function SessionSlides({ slides }: { slides: Slide[] }) {
   const frameRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
   const [isFull, setIsFull] = useState(false);
+  // Phones (iPhone Safari) can't put a page element in real full screen, so we fill the window instead.
+  const [pseudo, setPseudo] = useState(false);
+  const [viewport, setViewport] = useState({ w: 0, h: 0 });
 
   useEffect(() => {
     const onChange = () => setIsFull(document.fullscreenElement === frameRef.current);
@@ -296,17 +299,68 @@ export default function SessionSlides({ slides }: { slides: Slide[] }) {
     return () => document.removeEventListener("fullscreenchange", onChange);
   }, []);
 
+  useEffect(() => {
+    if (!pseudo) return;
+    const measure = () => setViewport({ w: window.innerWidth, h: window.innerHeight });
+    measure();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setPseudo(false);
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("resize", measure);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [pseudo]);
+
   if (slides.length === 0) return null;
   const slide = slides[Math.min(index, slides.length - 1)];
   const many = slides.length > 1;
   const go = (step: number) => setIndex((i) => (i + step + slides.length) % slides.length);
 
+  const full = isFull || pseudo;
+
   function toggleFull() {
     const el = frameRef.current;
     if (!el) return;
-    if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
-    else el.requestFullscreen?.().catch(() => {});
+    if (pseudo) return setPseudo(false);
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+      return;
+    }
+    const legacy = el as HTMLDivElement & { webkitRequestFullscreen?: () => void };
+    if (document.fullscreenEnabled && el.requestFullscreen) {
+      el.requestFullscreen().catch(() => setPseudo(true));
+    } else if (legacy.webkitRequestFullscreen) {
+      legacy.webkitRequestFullscreen();
+    } else {
+      setPseudo(true);
+    }
   }
+
+  // In window-filling mode on a phone held upright, turn the slide sideways so it is as big as possible.
+  const portrait = pseudo && viewport.h > viewport.w;
+  const areaW = portrait ? viewport.h : viewport.w;
+  const areaH = portrait ? viewport.w : viewport.h;
+  const slideWidth = Math.max(0, Math.min(areaW - 24, (areaH - 24 - 52) * (16 / 9)));
+  const pseudoStyle: CSSProperties | undefined = pseudo
+    ? portrait
+      ? {
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: viewport.h,
+          height: viewport.w,
+          transform: "rotate(90deg) translateY(-100%)",
+          transformOrigin: "top left",
+          zIndex: 50,
+        }
+      : { position: "fixed", inset: 0, zIndex: 50 }
+    : undefined;
 
   return (
     <section className="space-y-3">
@@ -324,12 +378,16 @@ export default function SessionSlides({ slides }: { slides: Slide[] }) {
           if (event.key === "ArrowRight") go(rtl ? -1 : 1);
           if (event.key === "ArrowLeft") go(rtl ? 1 : -1);
         }}
-        className={`flex flex-col gap-3 outline-none ${isFull ? "items-center justify-center bg-background p-6" : ""}`}
+        style={pseudoStyle}
+        className={`flex flex-col gap-3 outline-none ${
+          isFull ? "items-center justify-center bg-background p-6" : pseudo ? "items-center justify-center bg-background p-3" : ""
+        }`}
       >
         <div
           className={`@container relative flex aspect-video w-full flex-col overflow-hidden rounded-xl border border-border bg-card ${
             isFull ? "max-h-[85vh] max-w-[calc(85vh*16/9)]" : ""
           }`}
+          style={pseudo ? { width: slideWidth } : undefined}
           role="group"
           aria-roledescription="slide"
           aria-label={`${copy.slide} ${index + 1} / ${slides.length}`}
@@ -342,7 +400,10 @@ export default function SessionSlides({ slides }: { slides: Slide[] }) {
           </div>
         </div>
 
-        <div className="flex w-full items-center justify-between gap-3 text-sm">
+        <div
+          className="flex w-full items-center justify-between gap-3 text-sm"
+          style={pseudo ? { width: slideWidth } : undefined}
+        >
           <div className="flex items-center gap-2">
             {many && (
               <>
@@ -373,7 +434,7 @@ export default function SessionSlides({ slides }: { slides: Slide[] }) {
             onClick={toggleFull}
             className="rounded-lg border border-border px-3 py-1.5 hover:border-accent"
           >
-            {isFull ? copy.exit : copy.fullscreen}
+            {full ? copy.exit : copy.fullscreen}
           </button>
         </div>
       </div>
