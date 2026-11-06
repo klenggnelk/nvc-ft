@@ -193,11 +193,17 @@ function SlideBody({ slide, language }: { slide: Slide; language: Language }) {
               <span className={`block text-[2.2cqw] uppercase tracking-wide ${r === 0 ? "text-accent" : "text-muted"}`}>
                 {l(row.label)}
               </span>
-              <div className="grid grid-cols-4 gap-[1.5cqw]">
+              <div className="flex items-center gap-[1.5cqw]">
                 {row.items.map((item, i) => (
-                  <span key={i} className={`text-[3cqw] ${r === 0 ? chipStrong : chipMuted}`}>
-                    {l(item)}
-                  </span>
+                  <div key={i} className="contents">
+                    {i > 0 &&
+                      (row.arrows ? (
+                        <Arrow className={`text-[3.5cqw] ${r === 0 ? "text-accent" : "text-muted"}`} />
+                      ) : (
+                        <span aria-hidden className="w-[3.5cqw] shrink-0" />
+                      ))}
+                    <span className={`min-w-0 flex-1 text-[2.5cqw] ${r === 0 ? chipStrong : chipMuted}`}>{l(item)}</span>
+                  </div>
                 ))}
               </div>
             </div>

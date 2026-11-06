@@ -28,8 +28,9 @@ export type Slide =
       /** Two aligned rows: what connects (top) and what disconnects (bottom) */
       kind: "rows";
       title?: Localized;
-      top: { label: Localized; items: Localized[] };
-      bottom: { label: Localized; items: Localized[] };
+      /** `arrows` draws arrows between the items in that row */
+      top: { label: Localized; items: Localized[]; arrows?: boolean };
+      bottom: { label: Localized; items: Localized[]; arrows?: boolean };
     }
   | {
       /** The same items used in two directions */
@@ -56,11 +57,11 @@ export type Slide =
 
 export const slidesBySession: Record<number, Slide[]> = {
   1: [
-    { kind: "contrast", title: t("Observation or judgment?", "Observasjon eller vurdering?"), left: { label: t("Observation", "Observasjon"), sub: t("What a camera sees", "Det et kamera ser"), icon: "camera" }, right: { label: t("Judgment", "Vurdering"), sub: t("What I add", "Det jeg legger til"), icon: "thought" } },
+    { kind: "contrast", left: { label: t("Observation", "Observasjon"), sub: t("What a camera sees", "Det et kamera ser"), icon: "camera" }, right: { label: t("Judgment", "Vurdering"), sub: t("What I add", "Det jeg legger til"), icon: "thought" } },
     { kind: "steps", title: t("Language that disconnects", "Språk som bryter kontakt"), items: [t("Diagnosis", "Diagnose"), t("Denial of responsibility", "Å fraskrive seg ansvar"), t("Deserve thinking", "Fortjeneste-tenkning"), t("Demands", "Krav")], arrows: false, muted: true },
   ],
   2: [
-    { kind: "contrast", title: t("Feeling or thought?", "Følelse eller tanke?"), left: { label: t("Feeling", "Følelse"), sub: t("In the body", "I kroppen"), icon: "heart" }, right: { label: t("Thought", "Tanke"), sub: t("“I feel that you…”", "«Jeg føler at du…»"), icon: "thought" } },
+    { kind: "contrast", left: { label: t("Feeling", "Følelse"), sub: t("In the body", "I kroppen"), icon: "heart" }, right: { label: t("Thought", "Tanke"), sub: t("“I feel that you…”", "«Jeg føler at du…»"), icon: "thought" } },
     { kind: "roots", title: t("One need, many strategies", "Ett behov, mange strategier"), need: t("Connection", "Kontakt"), strategies: [t("A phone call", "En telefonsamtale"), t("A visit", "Et besøk"), t("A message", "En melding"), t("A hug", "En klem")] },
   ],
   3: [
@@ -70,7 +71,7 @@ export const slidesBySession: Record<number, Slide[]> = {
     { kind: "contrast", title: t("When the answer is “no”", "Når svaret er «nei»"), left: { label: t("Request", "Anmodning"), sub: t("Curiosity", "Nysgjerrighet"), icon: "door" }, right: { label: t("Demand", "Krav"), sub: t("Blame, guilt, punishment", "Skyld, dårlig samvittighet, straff"), icon: "lock" } },
   ],
   5: [
-    { kind: "rows", top: { label: t("Connects", "Skaper kontakt"), items: [t("Observation", "Observasjon"), t("Feeling", "Følelse"), t("Need", "Behov"), t("Request", "Anmodning")] }, bottom: { label: t("Disconnects", "Bryter kontakt"), items: [t("Judgment", "Vurdering"), t("Thinking", "Tenkning"), t("Strategy", "Strategi"), t("Demand", "Krav")] } },
+    { kind: "rows", top: { label: t("Connects", "Skaper kontakt"), arrows: true, items: [t("Observation", "Observasjon"), t("Feeling", "Følelse"), t("Need", "Behov"), t("Request", "Anmodning")] }, bottom: { label: t("Disconnects", "Bryter kontakt"), items: [t("Judgment", "Vurdering"), t("Thinking", "Tenkning"), t("Strategy", "Strategi"), t("Demand", "Krav")] } },
     { kind: "twoWay", title: t("The same four parts, both ways", "De samme fire delene, begge veier"), items: [t("Observation", "Observasjon"), t("Feeling", "Følelse"), t("Need", "Behov"), t("Request", "Anmodning")], forward: t("Expressing honestly", "Uttrykke ærlig"), back: t("Receiving with empathy", "Ta imot med empati") },
   ],
   6: [
