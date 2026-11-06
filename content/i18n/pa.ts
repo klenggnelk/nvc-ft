@@ -1134,6 +1134,11 @@ const translations: Record<string, string> = {
     "پوریاں تے ادھوریاں لوڑاں",
   "A request to myself":
     "اپنے آپ نوں بینتی",
+  // Resources
+  "Feelings and needs card — PDF to print":
+    "احساس تے لوڑاں دا کارڈ — پرنٹ کرن لئی PDF",
+  "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
+    "جیب والا کارڈ (94 × 54 ملی میٹر): اگے احساس، پچھے لوڑاں۔ تہاڈی چُنی ہوئی بولی وچ۔",
 };
 
 export default translations;

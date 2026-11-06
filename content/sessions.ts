@@ -7,7 +7,7 @@
 // DRAFT FOR TRAINER REVIEW: the "practices" (exercises) and suggested readings were drafted by
 // Claude from the agenda topics — please check, change or remove them freely.
 
-import type { Localized } from "@/app/lib/language";
+import type { Language, Localized } from "@/app/lib/language";
 
 // ---------------------------------------------------------------------------
 // Course details
@@ -54,8 +54,15 @@ export type Resource = {
   kind: ResourceKind;
   title: Localized;
   url?: string;
+  /** Language-specific files (e.g. a translated PDF); falls back to `url` */
+  urlByLanguage?: Partial<Record<Language, string>>;
   note?: Localized;
 };
+
+/** The link to show for a resource in the chosen language. */
+export function resourceUrl(resource: Resource, language: Language): string | undefined {
+  return resource.urlByLanguage?.[language] ?? resource.url;
+}
 
 export type Exercise = {
   id: string;
@@ -275,6 +282,24 @@ export const sessions: Session[] = [
         note: {
           en: "Translates words like \"ignored\" or \"betrayed\" into the real feelings and needs behind them.",
           no: "Oversetter ord som «ignorert» eller «forrådt» til de egentlige følelsene og behovene bak.",
+        },
+      },
+      {
+        id: "s2-feelings-needs-card",
+        kind: "handout",
+        title: { en: "Feelings and needs card — PDF to print", no: "Kort med følelser og behov – PDF til utskrift" },
+        url: "/downloads/nvc-feelings-needs-card-en.pdf",
+        urlByLanguage: {
+          no: "/downloads/nvc-feelings-needs-card-no.pdf",
+          fr: "/downloads/nvc-feelings-needs-card-fr.pdf",
+          ro: "/downloads/nvc-feelings-needs-card-ro.pdf",
+          sw: "/downloads/nvc-feelings-needs-card-sw.pdf",
+          am: "/downloads/nvc-feelings-needs-card-am.pdf",
+          pa: "/downloads/nvc-feelings-needs-card-pa.pdf",
+        },
+        note: {
+          en: "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.",
+          no: "Et lommekort (94 × 54 mm): følelser på forsiden, behov på baksiden. På språket du har valgt.",
         },
       },
     ],

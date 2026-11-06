@@ -1134,6 +1134,11 @@ const translations: Record<string, string> = {
     "Nevoi împlinite și neîmplinite",
   "A request to myself":
     "O cerere către mine",
+  // Resources
+  "Feelings and needs card — PDF to print":
+    "Card cu sentimente și nevoi — PDF de tipărit",
+  "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
+    "Un card de buzunar (94 × 54 mm): sentimentele pe față, nevoile pe spate. În limba pe care ai ales-o.",
 };
 
 export default translations;

@@ -1134,6 +1134,11 @@ const translations: Record<string, string> = {
     "Mahitaji yaliyotimizwa na yasiyotimizwa",
   "A request to myself":
     "Ombi kwangu mwenyewe",
+  // Resources
+  "Feelings and needs card — PDF to print":
+    "Kadi ya hisia na mahitaji — PDF ya kuchapisha",
+  "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
+    "Kadi ya mfukoni (94 × 54 mm): hisia upande wa mbele, mahitaji upande wa nyuma. Kwa lugha uliyochagua.",
 };
 
 export default translations;

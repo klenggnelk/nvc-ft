@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { getCopy, localize, type Language } from "@/app/lib/language";
-import { generalResources, sessions, type Resource } from "@/content/sessions";
+import { generalResources, resourceUrl, sessions, type Resource } from "@/content/sessions";
 
 const copyByLanguage: Record<
   Language,
@@ -100,7 +100,7 @@ const copyByLanguage: Record<
 
 function ResourceItem({ resource, language, bring = false }: { resource: Resource; language: Language; bring?: boolean }) {
   const copy = getCopy(copyByLanguage, language);
-  const external = resource.url?.startsWith("http");
+  const url = resourceUrl(resource, language);
 
   return (
     <li>
@@ -110,10 +110,11 @@ function ResourceItem({ resource, language, bring = false }: { resource: Resourc
       {resource.kind === "podcast" && (
         <span className="me-2 rounded-full bg-accent-soft px-2 py-0.5 text-xs text-accent">{copy.podcast}</span>
       )}
-      {resource.url ? (
+      {url ? (
         <a
-          href={resource.url}
-          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-accent underline-offset-2 hover:underline"
         >
           {localize(resource.title, language)}

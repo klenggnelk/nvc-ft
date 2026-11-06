@@ -1134,6 +1134,11 @@ const translations: Record<string, string> = {
     "የተሟሉና ያልተሟሉ ፍላጎቶች",
   "A request to myself":
     "ለራሴ የማቀርበው ጥያቄ",
+  // Resources
+  "Feelings and needs card — PDF to print":
+    "የስሜቶችና የፍላጎቶች ካርድ — የሚታተም PDF",
+  "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
+    "የኪስ ካርድ (94 × 54 ሚ.ሜ)፦ ስሜቶች ከፊት፣ ፍላጎቶች ከኋላ። በመረጣችሁት ቋንቋ።",
 };
 
 export default translations;

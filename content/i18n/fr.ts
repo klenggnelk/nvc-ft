@@ -1134,6 +1134,11 @@ const translations: Record<string, string> = {
     "Besoins satisfaits et non satisfaits",
   "A request to myself":
     "Une demande à moi-même",
+  // Resources
+  "Feelings and needs card — PDF to print":
+    "Carte des sentiments et besoins — PDF à imprimer",
+  "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
+    "Une carte de poche (94 × 54 mm) : les sentiments au recto, les besoins au verso. Dans la langue que vous avez choisie.",
 };
 
 export default translations;

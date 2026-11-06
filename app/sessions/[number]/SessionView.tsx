@@ -10,7 +10,7 @@ import SongPlayer from "@/app/components/SongPlayer";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { formatSessionDate, getCopy, localize, type Language } from "@/app/lib/language";
 import { checksForSession } from "@/content/checks";
-import { course, getSession, sessionDate, sessionFlow, sessions } from "@/content/sessions";
+import { course, getSession, resourceUrl, sessionDate, sessionFlow, sessions } from "@/content/sessions";
 
 const copyByLanguage: Record<
   Language,
@@ -210,9 +210,9 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
           <ul className="space-y-2">
             {session.bring.map((item) => (
               <li key={item.id}>
-                {item.url ? (
+                {resourceUrl(item, language) ? (
                   <a
-                    href={item.url}
+                    href={resourceUrl(item, language)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium text-accent underline underline-offset-2"
@@ -292,10 +292,11 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
             {session.resources.map((resource) => (
               <li key={resource.id}>
                 {resource.kind === "podcast" && <span className="me-2 rounded-full bg-accent-soft px-2 py-0.5 text-xs text-accent">{copy.podcast}</span>}
-                {resource.url ? (
+                {resourceUrl(resource, language) ? (
                   <a
-                    href={resource.url}
-                    {...(resource.url.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    href={resourceUrl(resource, language)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-accent underline-offset-2 hover:underline"
                   >
                     {localize(resource.title, language)}
