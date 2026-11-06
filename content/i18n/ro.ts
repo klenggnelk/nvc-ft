@@ -1029,6 +1029,111 @@ const translations: Record<string, string> = {
     "Plănuim exercițiul împreună: tu aduci ideea, iar eu am grijă de timp.",
   "Each person contributes, and both needs count.":
     "Fiecare contribuie, iar nevoile amândurora contează.",
+  // Slide labels (content/slides.ts)
+  "What a camera sees":
+    "Ce vede o cameră",
+  "Judgment":
+    "Judecată",
+  "What I add":
+    "Ce adaug eu",
+  "Language that disconnects":
+    "Limbajul care deconectează",
+  "Diagnosis":
+    "Diagnostic",
+  "Denial of responsibility":
+    "Negarea responsabilității",
+  "Deserve thinking":
+    "Gândirea „merită”",
+  "Demands":
+    "Pretenții",
+  "In the body":
+    "În corp",
+  "Thought":
+    "Gând",
+  "“I feel that you…”":
+    "„Simt că tu…”",
+  "One need, many strategies":
+    "O nevoie, multe strategii",
+  "Connection":
+    "Conectare",
+  "A phone call":
+    "Un telefon",
+  "A visit":
+    "O vizită",
+  "A message":
+    "Un mesaj",
+  "A hug":
+    "O îmbrățișare",
+  "Be present":
+    "Fii prezent",
+  "Listen":
+    "Ascultă",
+  "Guess: feeling and need":
+    "Ghicește: sentiment și nevoie",
+  "Check with them":
+    "Verifică împreună",
+  "When the answer is “no”":
+    "Când răspunsul este „nu”",
+  "Curiosity":
+    "Curiozitate",
+  "Blame, guilt, punishment":
+    "Vină, vinovăție, pedeapsă",
+  "Connects":
+    "Conectează",
+  "Disconnects":
+    "Deconectează",
+  "Thinking":
+    "Gânduri",
+  "Strategy":
+    "Strategie",
+  "The same four parts, both ways":
+    "Aceleași patru părți, în ambele direcții",
+  "Expressing honestly":
+    "Exprimare sinceră",
+  "Receiving with empathy":
+    "Primire cu empatie",
+  "Translating the inner jackal":
+    "Traducerea șacalului interior",
+  "Self-judgment":
+    "Autocritică",
+  "Staying with the other person":
+    "A rămâne cu celălalt",
+  "Their feelings and needs":
+    "Sentimentele și nevoile lui",
+  "Expressing anger fully":
+    "A exprima furia pe deplin",
+  "Stop and breathe":
+    "Oprește-te și respiră",
+  "Notice the judging thoughts":
+    "Observă gândurile care judecă",
+  "Connect with the needs":
+    "Conectează-te cu nevoile",
+  "Express feelings and needs":
+    "Exprimă sentimente și nevoi",
+  "Stimulus, not cause":
+    "Stimul, nu cauză",
+  "Stimulus":
+    "Stimul",
+  "My need":
+    "Nevoia mea",
+  "My feeling":
+    "Sentimentul meu",
+  "Learn":
+    "Învață",
+  "Practise":
+    "Exersează",
+  "Share":
+    "Împărtășește",
+  "Feedback, the NVC way":
+    "Feedback în stil CNV",
+  "What I observed":
+    "Ce am observat",
+  "What I feel":
+    "Ce simt",
+  "Needs met and not met":
+    "Nevoi împlinite și neîmplinite",
+  "A request to myself":
+    "O cerere către mine",
 };
 
 export default translations;

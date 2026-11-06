@@ -1029,6 +1029,111 @@ const translations: Record<string, string> = {
     "اسیں رَل کے مشق دی منصوبہ بندی کردے آں: تسیں خیال لیاندے او، تے میں ویلے دا دھیان رکھدا آں۔",
   "Each person contributes, and both needs count.":
     "ہر بندہ حصہ پاندا اے، تے دوہاں دیاں لوڑاں اہم نیں۔",
+  // Slide labels (content/slides.ts)
+  "What a camera sees":
+    "جو کیمرہ ویکھدا اے",
+  "Judgment":
+    "فیصلہ",
+  "What I add":
+    "جو میں رَلاندا آں",
+  "Language that disconnects":
+    "تعلق توڑن والی بولی",
+  "Diagnosis":
+    "لیبل لانا",
+  "Denial of responsibility":
+    "ذمہ داری توں انکار",
+  "Deserve thinking":
+    "حقدار ہون والی سوچ",
+  "Demands":
+    "مطالبے",
+  "In the body":
+    "سرِیر وچ",
+  "Thought":
+    "خیال",
+  "“I feel that you…”":
+    "“مینوں لگدا اے کہ تسیں…”",
+  "One need, many strategies":
+    "اک لوڑ، کئی طریقے",
+  "Connection":
+    "تعلق",
+  "A phone call":
+    "اک فون",
+  "A visit":
+    "ملن جانا",
+  "A message":
+    "اک سنیہا",
+  "A hug":
+    "جپھی",
+  "Be present":
+    "حاضر رہو",
+  "Listen":
+    "سنو",
+  "Guess: feeling and need":
+    "اندازہ لاؤ: احساس تے لوڑ",
+  "Check with them":
+    "اوہدے نال پکا کرو",
+  "When the answer is “no”":
+    "جدوں جواب “نئیں” ہووے",
+  "Curiosity":
+    "تجسس",
+  "Blame, guilt, punishment":
+    "الزام، ندامت، سزا",
+  "Connects":
+    "جوڑدا اے",
+  "Disconnects":
+    "توڑدا اے",
+  "Thinking":
+    "سوچ",
+  "Strategy":
+    "طریقہ",
+  "The same four parts, both ways":
+    "اوہی چار حصے، دوویں پاسے",
+  "Expressing honestly":
+    "ایمانداری نال دسنا",
+  "Receiving with empathy":
+    "ہم احساسی نال سننا",
+  "Translating the inner jackal":
+    "اندرلے گِدڑ دا ترجمہ",
+  "Self-judgment":
+    "اپنے آپ تے فیصلہ",
+  "Staying with the other person":
+    "دوجے بندے نال رہنا",
+  "Their feelings and needs":
+    "اوہدے احساس تے لوڑاں",
+  "Expressing anger fully":
+    "غصہ پوری طرح دسنا",
+  "Stop and breathe":
+    "رُکو تے ساہ لوو",
+  "Notice the judging thoughts":
+    "فیصلے والے خیال پچھانو",
+  "Connect with the needs":
+    "لوڑاں نال جُڑو",
+  "Express feelings and needs":
+    "احساس تے لوڑاں دسو",
+  "Stimulus, not cause":
+    "چھیڑ، وجہ نئیں",
+  "Stimulus":
+    "چھیڑ",
+  "My need":
+    "میری لوڑ",
+  "My feeling":
+    "میرا احساس",
+  "Learn":
+    "سکھو",
+  "Practise":
+    "مشق کرو",
+  "Share":
+    "سانجھا کرو",
+  "Feedback, the NVC way":
+    "NVC دے طریقے نال رائے",
+  "What I observed":
+    "جو میں ویکھیا",
+  "What I feel":
+    "جو میں محسوس کردا آں",
+  "Needs met and not met":
+    "پوریاں تے ادھوریاں لوڑاں",
+  "A request to myself":
+    "اپنے آپ نوں بینتی",
 };
 
 export default translations;

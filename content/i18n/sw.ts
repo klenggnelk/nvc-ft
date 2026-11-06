@@ -1029,6 +1029,111 @@ const translations: Record<string, string> = {
     "Tunapanga zoezi pamoja: wewe unaleta wazo, na mimi ninaangalia muda.",
   "Each person contributes, and both needs count.":
     "Kila mtu anachangia, na mahitaji ya wote wawili yana maana.",
+  // Slide labels (content/slides.ts)
+  "What a camera sees":
+    "Kile kamera inaona",
+  "Judgment":
+    "Hukumu",
+  "What I add":
+    "Ninachoongeza",
+  "Language that disconnects":
+    "Lugha inayovunja muunganiko",
+  "Diagnosis":
+    "Lebo",
+  "Denial of responsibility":
+    "Kukana uwajibikaji",
+  "Deserve thinking":
+    "Fikra za kustahili",
+  "Demands":
+    "Madai",
+  "In the body":
+    "Mwilini",
+  "Thought":
+    "Wazo",
+  "“I feel that you…”":
+    "“Ninahisi kwamba wewe…”",
+  "One need, many strategies":
+    "Hitaji moja, mikakati mingi",
+  "Connection":
+    "Muunganiko",
+  "A phone call":
+    "Simu",
+  "A visit":
+    "Kutembelea",
+  "A message":
+    "Ujumbe",
+  "A hug":
+    "Kumbatio",
+  "Be present":
+    "Kuwa hapo",
+  "Listen":
+    "Sikiliza",
+  "Guess: feeling and need":
+    "Kisia: hisia na hitaji",
+  "Check with them":
+    "Hakiki naye",
+  "When the answer is “no”":
+    "Jibu linapokuwa “hapana”",
+  "Curiosity":
+    "Udadisi",
+  "Blame, guilt, punishment":
+    "Lawama, hatia, adhabu",
+  "Connects":
+    "Huunganisha",
+  "Disconnects":
+    "Hutenganisha",
+  "Thinking":
+    "Mawazo",
+  "Strategy":
+    "Mkakati",
+  "The same four parts, both ways":
+    "Sehemu nne zile zile, pande zote mbili",
+  "Expressing honestly":
+    "Kujieleza kwa uaminifu",
+  "Receiving with empathy":
+    "Kupokea kwa uelewa wa hisia",
+  "Translating the inner jackal":
+    "Kutafsiri mbweha wa ndani",
+  "Self-judgment":
+    "Kujihukumu",
+  "Staying with the other person":
+    "Kubaki na mtu mwingine",
+  "Their feelings and needs":
+    "Hisia na mahitaji yake",
+  "Expressing anger fully":
+    "Kueleza hasira kikamilifu",
+  "Stop and breathe":
+    "Simama na pumua",
+  "Notice the judging thoughts":
+    "Tambua mawazo ya hukumu",
+  "Connect with the needs":
+    "Ungana na mahitaji",
+  "Express feelings and needs":
+    "Eleza hisia na mahitaji",
+  "Stimulus, not cause":
+    "Kichocheo, si chanzo",
+  "Stimulus":
+    "Kichocheo",
+  "My need":
+    "Hitaji langu",
+  "My feeling":
+    "Hisia yangu",
+  "Learn":
+    "Jifunze",
+  "Practise":
+    "Jizoeze",
+  "Share":
+    "Shiriki",
+  "Feedback, the NVC way":
+    "Maoni kwa njia ya NVC",
+  "What I observed":
+    "Nilichoona",
+  "What I feel":
+    "Ninachohisi",
+  "Needs met and not met":
+    "Mahitaji yaliyotimizwa na yasiyotimizwa",
+  "A request to myself":
+    "Ombi kwangu mwenyewe",
 };
 
 export default translations;

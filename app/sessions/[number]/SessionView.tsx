@@ -4,6 +4,8 @@ import Link from "next/link";
 import CheckGame from "@/app/components/CheckGame";
 import ExerciseCard from "@/app/components/ExerciseCard";
 import ResponseExamplesBox from "@/app/components/ResponseExamplesBox";
+import SessionSlides from "@/app/components/SessionSlides";
+import { slidesForSession } from "@/content/slides";
 import SongPlayer from "@/app/components/SongPlayer";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { formatSessionDate, getCopy, localize, type Language } from "@/app/lib/language";
@@ -251,6 +253,8 @@ export default function SessionView({ sessionNumber }: { sessionNumber: number }
           ))}
         </ul>
       </section>
+
+      <SessionSlides key={session.number} slides={slidesForSession(session.number)} />
 
       <section className="space-y-2 rounded-xl bg-accent-soft p-5">
         <h2 className="font-semibold">{copy.recording}</h2>

@@ -1029,6 +1029,111 @@ const translations: Record<string, string> = {
     "Nous préparons l'exercice ensemble : tu apportes l'idée, et je surveille le temps.",
   "Each person contributes, and both needs count.":
     "Chacun contribue, et les besoins des deux comptent.",
+  // Slide labels (content/slides.ts)
+  "What a camera sees":
+    "Ce que voit une caméra",
+  "Judgment":
+    "Jugement",
+  "What I add":
+    "Ce que j'ajoute",
+  "Language that disconnects":
+    "Le langage qui coupe le lien",
+  "Diagnosis":
+    "Diagnostic",
+  "Denial of responsibility":
+    "Déni de responsabilité",
+  "Deserve thinking":
+    "Pensée du mérite",
+  "Demands":
+    "Exigences",
+  "In the body":
+    "Dans le corps",
+  "Thought":
+    "Pensée",
+  "“I feel that you…”":
+    "« Je sens que tu… »",
+  "One need, many strategies":
+    "Un besoin, beaucoup de stratégies",
+  "Connection":
+    "Lien",
+  "A phone call":
+    "Un appel",
+  "A visit":
+    "Une visite",
+  "A message":
+    "Un message",
+  "A hug":
+    "Un câlin",
+  "Be present":
+    "Être présent",
+  "Listen":
+    "Écouter",
+  "Guess: feeling and need":
+    "Deviner : sentiment et besoin",
+  "Check with them":
+    "Vérifier avec l'autre",
+  "When the answer is “no”":
+    "Quand la réponse est « non »",
+  "Curiosity":
+    "Curiosité",
+  "Blame, guilt, punishment":
+    "Reproche, culpabilité, punition",
+  "Connects":
+    "Relie",
+  "Disconnects":
+    "Coupe le lien",
+  "Thinking":
+    "Pensée",
+  "Strategy":
+    "Stratégie",
+  "The same four parts, both ways":
+    "Les quatre mêmes éléments, dans les deux sens",
+  "Expressing honestly":
+    "S'exprimer avec honnêteté",
+  "Receiving with empathy":
+    "Recevoir avec empathie",
+  "Translating the inner jackal":
+    "Traduire le chacal intérieur",
+  "Self-judgment":
+    "Autocritique",
+  "Staying with the other person":
+    "Rester avec l'autre",
+  "Their feelings and needs":
+    "Ses sentiments et ses besoins",
+  "Expressing anger fully":
+    "Exprimer pleinement la colère",
+  "Stop and breathe":
+    "S'arrêter et respirer",
+  "Notice the judging thoughts":
+    "Repérer les pensées de jugement",
+  "Connect with the needs":
+    "Se relier aux besoins",
+  "Express feelings and needs":
+    "Exprimer sentiments et besoins",
+  "Stimulus, not cause":
+    "Stimulus, pas cause",
+  "Stimulus":
+    "Stimulus",
+  "My need":
+    "Mon besoin",
+  "My feeling":
+    "Mon sentiment",
+  "Learn":
+    "Apprendre",
+  "Practise":
+    "Pratiquer",
+  "Share":
+    "Partager",
+  "Feedback, the NVC way":
+    "Un retour à la manière de la CNV",
+  "What I observed":
+    "Ce que j'ai observé",
+  "What I feel":
+    "Ce que je ressens",
+  "Needs met and not met":
+    "Besoins satisfaits et non satisfaits",
+  "A request to myself":
+    "Une demande à moi-même",
 };
 
 export default translations;

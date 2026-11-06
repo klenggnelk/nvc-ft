@@ -1029,6 +1029,111 @@ const translations: Record<string, string> = {
     "ልምምዱን አብረን እናቅዳለን፦ አንተ ሐሳቡን ታመጣለህ፣ እኔ ሰዓቱን እጠብቃለሁ።",
   "Each person contributes, and both needs count.":
     "እያንዳንዱ ሰው ያበረክታል፣ የሁለቱም ፍላጎቶች ይቆጠራሉ።",
+  // Slide labels (content/slides.ts)
+  "What a camera sees":
+    "ካሜራ የሚያየው",
+  "Judgment":
+    "ፍርድ",
+  "What I add":
+    "እኔ የምጨምረው",
+  "Language that disconnects":
+    "ግንኙነትን የሚያቋርጥ ቋንቋ",
+  "Diagnosis":
+    "ስያሜ መስጠት",
+  "Denial of responsibility":
+    "ኃላፊነትን መካድ",
+  "Deserve thinking":
+    "«ይገባዋል» አስተሳሰብ",
+  "Demands":
+    "ግዳጆች",
+  "In the body":
+    "በሰውነት ውስጥ",
+  "Thought":
+    "ሐሳብ",
+  "“I feel that you…”":
+    "«አንተ… እንደሆንክ ይሰማኛል»",
+  "One need, many strategies":
+    "አንድ ፍላጎት፣ ብዙ ስልቶች",
+  "Connection":
+    "ግንኙነት",
+  "A phone call":
+    "የስልክ ጥሪ",
+  "A visit":
+    "መጎብኘት",
+  "A message":
+    "መልእክት",
+  "A hug":
+    "ማቀፍ",
+  "Be present":
+    "ተገኙ",
+  "Listen":
+    "አዳምጡ",
+  "Guess: feeling and need":
+    "ገምቱ፦ ስሜትና ፍላጎት",
+  "Check with them":
+    "ከእሱ ጋር አረጋግጡ",
+  "When the answer is “no”":
+    "መልሱ «አይ» ሲሆን",
+  "Curiosity":
+    "የማወቅ ጉጉት",
+  "Blame, guilt, punishment":
+    "ወቀሳ፣ የጥፋተኝነት ስሜት፣ ቅጣት",
+  "Connects":
+    "ያገናኛል",
+  "Disconnects":
+    "ያለያያል",
+  "Thinking":
+    "አስተሳሰብ",
+  "Strategy":
+    "ስልት",
+  "The same four parts, both ways":
+    "እነዚያው አራት ክፍሎች፣ በሁለቱም አቅጣጫ",
+  "Expressing honestly":
+    "በታማኝነት መግለጽ",
+  "Receiving with empathy":
+    "በስሜታዊ መረዳት መቀበል",
+  "Translating the inner jackal":
+    "የውስጥ ቀበሮን መተርጎም",
+  "Self-judgment":
+    "ራስን መፍረድ",
+  "Staying with the other person":
+    "ከሌላው ሰው ጋር መቆየት",
+  "Their feelings and needs":
+    "የእሱ ስሜቶችና ፍላጎቶች",
+  "Expressing anger fully":
+    "ቁጣን ሙሉ በሙሉ መግለጽ",
+  "Stop and breathe":
+    "ቁሙና ተንፍሱ",
+  "Notice the judging thoughts":
+    "የፍርድ ሐሳቦችን አስተውሉ",
+  "Connect with the needs":
+    "ከፍላጎቶቹ ጋር ተገናኙ",
+  "Express feelings and needs":
+    "ስሜቶችንና ፍላጎቶችን ግለጹ",
+  "Stimulus, not cause":
+    "ቀስቃሽ እንጂ ምክንያት አይደለም",
+  "Stimulus":
+    "ቀስቃሽ",
+  "My need":
+    "የእኔ ፍላጎት",
+  "My feeling":
+    "የእኔ ስሜት",
+  "Learn":
+    "ተማሩ",
+  "Practise":
+    "ተለማመዱ",
+  "Share":
+    "አካፍሉ",
+  "Feedback, the NVC way":
+    "አስተያየት በNVC መንገድ",
+  "What I observed":
+    "ያየሁት",
+  "What I feel":
+    "የሚሰማኝ",
+  "Needs met and not met":
+    "የተሟሉና ያልተሟሉ ፍላጎቶች",
+  "A request to myself":
+    "ለራሴ የማቀርበው ጥያቄ",
 };
 
 export default translations;
