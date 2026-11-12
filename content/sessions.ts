@@ -415,6 +415,10 @@ export const sessions: Session[] = [
   {
     number: 4,
     title: { en: "Requests", no: "Anmodninger" },
+    recordings: [
+      { youtubeId: "TT6TueVERbE", title: { en: "Recording, part 1", no: "Opptak, del 1" } },
+      { youtubeId: "wpednSQm_bA", title: { en: "Recording, part 2", no: "Opptak, del 2" } },
+    ],
     subtitle: { en: "Asking for what we want, without demanding", no: "Å be om det vi ønsker, uten å kreve" },
     description: { en: "Knowing our needs is only half the journey. The other half is asking for what would help. We'll practise making requests that are clear, concrete and doable, and look at the one question that separates a request from a demand: how we respond to a \"no\".", no: "Å kjenne behovene våre er bare halve veien. Den andre halvdelen er å be om det som ville hjelpe. Vi øver på å komme med anmodninger som er tydelige, konkrete og gjennomførbare, og ser på det ene spørsmålet som skiller en anmodning fra et krav: hvordan vi møter et «nei»." },
     topics: [
