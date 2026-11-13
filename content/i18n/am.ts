@@ -1139,6 +1139,11 @@ const translations: Record<string, string> = {
     "የስሜቶችና የፍላጎቶች ካርድ — የሚታተም PDF",
   "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
     "የኪስ ካርድ (94 × 54 ሚ.ሜ)፦ ስሜቶች ከፊት፣ ፍላጎቶች ከኋላ። በመረጣችሁት ቋንቋ።",
+  // Session 4: from statement to request
+  "From statement to request":
+    "ከአረፍተ ነገር ወደ ጥያቄ",
+  "Turn each statement into an NVC request. First guess the need behind it. Then ask for one concrete, doable action, in positive language (what you want, not what you don't want). End with a question that leaves room for a \"no\".\n\n• You drive too fast.\n• You drink too much.\n• You need to be more confident.\n• No, I don't want to go.\n\nExample: \"You drive too fast.\" → \"When the speedometer shows 120, I feel scared, because I need to feel safe. Would you be willing to drive at 90 for the rest of the trip?\"\n\nTip: the last one is a \"no\". What might the person be saying yes to? Your request can invite them to tell you.":
+    "እያንዳንዱን አረፍተ ነገር ወደ NVC ጥያቄ ቀይሩት። መጀመሪያ ከጀርባው ያለውን ፍላጎት ገምቱ። ከዚያም አንድ ተጨባጭና ሊፈጸም የሚችል ተግባር በአዎንታዊ ቋንቋ ጠይቁ (የምትፈልጉትን፣ የማትፈልጉትን ሳይሆን)። ለ«አይ» ቦታ በሚተው ጥያቄ ጨርሱ።\n\n• በጣም በፍጥነት ትነዳለህ።\n• በጣም ትጠጣለህ።\n• የበለጠ በራስህ መተማመን አለብህ።\n• አይ፣ መሄድ አልፈልግም።\n\nምሳሌ፦ «በጣም በፍጥነት ትነዳለህ።» → «የፍጥነት መለኪያው 120 ሲያሳይ ፍርሃት ይሰማኛል፣ ምክንያቱም ደህንነት እንዲሰማኝ እፈልጋለሁ። ለቀረው ጉዞ በ90 ለመንዳት ፈቃደኛ ትሆናለህ?»\n\nምክር፦ የመጨረሻው «አይ» ነው። ሰውየው ለምን አዎ እያለ ሊሆን ይችላል? ጥያቄያችሁ እንዲነግራችሁ ሊጋብዘው ይችላል።",
 };
 
 export default translations;

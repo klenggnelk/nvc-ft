@@ -442,6 +442,14 @@ export const sessions: Session[] = [
     resources: [book("s4-ch6", 6, "Requesting that which would enrich life", "Å be om det som kan berike livet")],
     exercises: [
       {
+        id: "s4-statement-to-request",
+        title: { en: "From statement to request", no: "Fra utsagn til anmodning" },
+        instructions: {
+          en: "Turn each statement into an NVC request. First guess the need behind it. Then ask for one concrete, doable action, in positive language (what you want, not what you don't want). End with a question that leaves room for a \"no\".\n\n• You drive too fast.\n• You drink too much.\n• You need to be more confident.\n• No, I don't want to go.\n\nExample: \"You drive too fast.\" → \"When the speedometer shows 120, I feel scared, because I need to feel safe. Would you be willing to drive at 90 for the rest of the trip?\"\n\nTip: the last one is a \"no\". What might the person be saying yes to? Your request can invite them to tell you.",
+          no: "Gjør hvert utsagn om til en IVK-anmodning. Gjett først behovet bak. Be så om én konkret, gjennomførbar handling, i positivt språk (det du ønsker, ikke det du ikke ønsker). Avslutt med et spørsmål som gir rom for et «nei».\n\n• Du kjører for fort.\n• Du drikker for mye.\n• Du må bli tryggere på deg selv.\n• Nei, jeg vil ikke dra.\n\nEksempel: «Du kjører for fort.» → «Når speedometeret viser 120, blir jeg redd, fordi jeg trenger å føle meg trygg. Vil du være villig til å kjøre i 90 resten av turen?»\n\nTips: Det siste er et «nei». Hva kan personen si ja til? Anmodningen din kan invitere henne eller ham til å fortelle deg det.",
+        },
+      },
+      {
         id: "s4-wish-to-request",
         title: { en: "From wish to request", no: "Fra ønske til anmodning" },
         instructions: { en: "Write down a wish, for example \"I want more respect\". Now make it a request: say what you want (not what you don't want), make it concrete, and make it something the person can do now. Start with \"Would you be willing to…?\"", no: "Skriv ned et ønske, for eksempel «jeg vil ha mer respekt». Gjør det nå om til en anmodning: si hva du ønsker (ikke hva du ikke ønsker), gjør det konkret, og gjør det til noe personen kan gjøre nå. Begynn med «Vil du være villig til å…?»" },

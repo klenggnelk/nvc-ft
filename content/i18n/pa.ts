@@ -1139,6 +1139,11 @@ const translations: Record<string, string> = {
     "احساس تے لوڑاں دا کارڈ — پرنٹ کرن لئی PDF",
   "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
     "جیب والا کارڈ (94 × 54 ملی میٹر): اگے احساس، پچھے لوڑاں۔ تہاڈی چُنی ہوئی بولی وچ۔",
+  // Session 4: from statement to request
+  "From statement to request":
+    "گل توں بینتی تک",
+  "Turn each statement into an NVC request. First guess the need behind it. Then ask for one concrete, doable action, in positive language (what you want, not what you don't want). End with a question that leaves room for a \"no\".\n\n• You drive too fast.\n• You drink too much.\n• You need to be more confident.\n• No, I don't want to go.\n\nExample: \"You drive too fast.\" → \"When the speedometer shows 120, I feel scared, because I need to feel safe. Would you be willing to drive at 90 for the rest of the trip?\"\n\nTip: the last one is a \"no\". What might the person be saying yes to? Your request can invite them to tell you.":
+    "ہر گل نوں NVC بینتی وچ بدلو۔ پہلاں اوہدے پچھے لوڑ دا اندازہ لاؤ۔ فیر اک ٹھوس، کرن جوگا کم مثبت بولی وچ منگو (جو تسیں چاہندے او، اوہ نئیں جو نئیں چاہندے)۔ اک ایسے سوال نال مکاؤ جو “نئیں” لئی تھاں چھڈے۔\n\n• تسیں بہت تیز گڈی چلاندے او۔\n• تسیں بہت زیادہ پیندے او۔\n• تہانوں اپنے آپ تے ہور بھروسا کرنا چاہیدا اے۔\n• نئیں، میں نئیں جانا چاہندا۔\n\nمثال: “تسیں بہت تیز گڈی چلاندے او۔” → “جدوں سپیڈومیٹر 120 وکھاندا اے، مینوں ڈر لگدا اے، کیوں جے مینوں محفوظ محسوس کرن دی لوڑ اے۔ کی تسیں باقی سفر 90 تے چلان لئی راضی ہووو گے؟”\n\nصلاح: آخری گل اک “نئیں” اے۔ اوہ بندہ کس گل نوں ہاں آکھ رہیا ہووے گا؟ تہاڈی بینتی اوہنوں دسن لئی سدا دے سکدی اے۔",
 };
 
 export default translations;

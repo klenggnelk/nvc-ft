@@ -1139,6 +1139,11 @@ const translations: Record<string, string> = {
     "Kadi ya hisia na mahitaji — PDF ya kuchapisha",
   "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
     "Kadi ya mfukoni (94 × 54 mm): hisia upande wa mbele, mahitaji upande wa nyuma. Kwa lugha uliyochagua.",
+  // Session 4: from statement to request
+  "From statement to request":
+    "Kutoka kauli hadi ombi",
+  "Turn each statement into an NVC request. First guess the need behind it. Then ask for one concrete, doable action, in positive language (what you want, not what you don't want). End with a question that leaves room for a \"no\".\n\n• You drive too fast.\n• You drink too much.\n• You need to be more confident.\n• No, I don't want to go.\n\nExample: \"You drive too fast.\" → \"When the speedometer shows 120, I feel scared, because I need to feel safe. Would you be willing to drive at 90 for the rest of the trip?\"\n\nTip: the last one is a \"no\". What might the person be saying yes to? Your request can invite them to tell you.":
+    "Badilisha kila kauli kuwa ombi la NVC. Kwanza kisia hitaji lililo nyuma yake. Kisha omba kitendo kimoja mahususi kinachowezekana, kwa lugha chanya (unachotaka, si usichotaka). Malizia kwa swali linaloacha nafasi ya “hapana”.\n\n• Unaendesha gari kwa kasi sana.\n• Unakunywa pombe kupita kiasi.\n• Unahitaji kujiamini zaidi.\n• Hapana, sitaki kwenda.\n\nMfano: “Unaendesha gari kwa kasi sana.” → “Kipima mwendo kinapoonyesha 120, ninaogopa, kwa sababu ninahitaji kujisikia salama. Je, ungekuwa tayari kuendesha kwa 90 kwa safari iliyobaki?”\n\nDokezo: kauli ya mwisho ni “hapana”. Mtu huyo anaweza kuwa anasema ndiyo kwa nini? Ombi lako linaweza kumkaribisha akueleze.",
 };
 
 export default translations;

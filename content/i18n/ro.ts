@@ -1139,6 +1139,11 @@ const translations: Record<string, string> = {
     "Card cu sentimente și nevoi — PDF de tipărit",
   "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
     "Un card de buzunar (94 × 54 mm): sentimentele pe față, nevoile pe spate. În limba pe care ai ales-o.",
+  // Session 4: from statement to request
+  "From statement to request":
+    "De la afirmație la cerere",
+  "Turn each statement into an NVC request. First guess the need behind it. Then ask for one concrete, doable action, in positive language (what you want, not what you don't want). End with a question that leaves room for a \"no\".\n\n• You drive too fast.\n• You drink too much.\n• You need to be more confident.\n• No, I don't want to go.\n\nExample: \"You drive too fast.\" → \"When the speedometer shows 120, I feel scared, because I need to feel safe. Would you be willing to drive at 90 for the rest of the trip?\"\n\nTip: the last one is a \"no\". What might the person be saying yes to? Your request can invite them to tell you.":
+    "Transformă fiecare afirmație într-o cerere CNV. Mai întâi ghicește nevoia din spatele ei. Apoi cere o singură acțiune concretă și realizabilă, într-un limbaj pozitiv (ce vrei, nu ce nu vrei). Încheie cu o întrebare care lasă loc pentru un „nu”.\n\n• Conduci prea repede.\n• Bei prea mult.\n• Trebuie să ai mai multă încredere în tine.\n• Nu, nu vreau să merg.\n\nExemplu: „Conduci prea repede.” → „Când vitezometrul arată 120, mă sperii, pentru că am nevoie să mă simt în siguranță. Ai fi dispus să mergi cu 90 până la capătul drumului?”\n\nSfat: ultima este un „nu”. La ce ar putea spune da persoana? Cererea ta o poate invita să-ți spună.",
 };
 
 export default translations;

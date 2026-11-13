@@ -1139,6 +1139,11 @@ const translations: Record<string, string> = {
     "Carte des sentiments et besoins — PDF à imprimer",
   "A pocket card (94 × 54 mm): feelings on the front, needs on the back. In your chosen language.":
     "Une carte de poche (94 × 54 mm) : les sentiments au recto, les besoins au verso. Dans la langue que vous avez choisie.",
+  // Session 4: from statement to request
+  "From statement to request":
+    "De l'affirmation à la demande",
+  "Turn each statement into an NVC request. First guess the need behind it. Then ask for one concrete, doable action, in positive language (what you want, not what you don't want). End with a question that leaves room for a \"no\".\n\n• You drive too fast.\n• You drink too much.\n• You need to be more confident.\n• No, I don't want to go.\n\nExample: \"You drive too fast.\" → \"When the speedometer shows 120, I feel scared, because I need to feel safe. Would you be willing to drive at 90 for the rest of the trip?\"\n\nTip: the last one is a \"no\". What might the person be saying yes to? Your request can invite them to tell you.":
+    "Transformez chaque affirmation en demande CNV. Devinez d'abord le besoin derrière. Puis demandez une action concrète et réalisable, en langage positif (ce que vous voulez, pas ce que vous ne voulez pas). Terminez par une question qui laisse de la place à un « non ».\n\n• Tu conduis trop vite.\n• Tu bois trop.\n• Tu dois avoir plus confiance en toi.\n• Non, je ne veux pas y aller.\n\nExemple : « Tu conduis trop vite. » → « Quand le compteur indique 120, j'ai peur, parce que j'ai besoin de me sentir en sécurité. Serais-tu d'accord pour rouler à 90 pour le reste du trajet ? »\n\nAstuce : la dernière est un « non ». À quoi la personne dit-elle peut-être oui ? Votre demande peut l'inviter à vous le dire.",
 };
 
 export default translations;
